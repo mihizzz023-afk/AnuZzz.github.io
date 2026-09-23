@@ -55,6 +55,7 @@
       background: #f7f9fc;
       color: #172033;
       line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
     }
 
     a {
@@ -78,7 +79,7 @@
       display: flex;
       align-items: center;
       padding: 0 6%;
-      gap: 40px;
+      gap: 25px;
     }
 
     .logo {
@@ -108,7 +109,9 @@
       margin-top: 4px;
     }
 
-    /* NAV */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav {
       display: flex;
@@ -141,7 +144,9 @@
       border-radius: 5px;
     }
 
-    /* SEARCH */
+    /* =========================
+       SEARCH
+    ========================= */
 
     .search {
       background: #263950;
@@ -167,11 +172,37 @@
     }
 
     /* =========================
+       DARK MODE BUTTON
+    ========================= */
+
+    .theme-toggle {
+      border: none;
+      background: #263950;
+      color: white;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 19px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.25s;
+      flex-shrink: 0;
+    }
+
+    .theme-toggle:hover {
+      background: #354b68;
+      transform: translateY(-2px);
+    }
+
+    /* =========================
        HERO
     ========================= */
 
     .hero {
       min-height: 400px;
+
       background:
         linear-gradient(
           90deg,
@@ -183,9 +214,12 @@
 
       background-size: cover;
       background-position: center;
+
       display: flex;
       align-items: center;
+
       padding: 70px 6%;
+
       color: white;
     }
 
@@ -566,6 +600,74 @@
     }
 
     /* =========================
+       DARK MODE
+    ========================= */
+
+    body.dark-mode {
+      background: #0e141d;
+      color: #e8edf5;
+    }
+
+    body.dark-mode .section-title h2 {
+      color: #f1f4f8;
+    }
+
+    body.dark-mode .section-header p {
+      color: #aeb8c7;
+    }
+
+    body.dark-mode .post-card {
+      background: #182230;
+      border-color: #263448;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.25);
+    }
+
+    body.dark-mode .post-body h3 {
+      color: #f1f4f8;
+    }
+
+    body.dark-mode .post-body p {
+      color: #aeb8c7;
+    }
+
+    body.dark-mode .post-meta {
+      color: #8f9bad;
+    }
+
+    body.dark-mode .topic p {
+      color: #aeb8c7;
+    }
+
+    body.dark-mode .education {
+      background: #182c43;
+    }
+
+    body.dark-mode .technology {
+      background: #15352f;
+    }
+
+    body.dark-mode .life {
+      background: #3b321c;
+    }
+
+    body.dark-mode .guides {
+      background: #3b222c;
+    }
+
+    body.dark-mode .motivation {
+      background: #30243c;
+    }
+
+    body.dark-mode .category {
+      background: #27315a;
+      color: #9eabff;
+    }
+
+    body.dark-mode .theme-toggle {
+      background: #354b68;
+    }
+
+    /* =========================
        MOBILE
     ========================= */
 
@@ -627,6 +729,10 @@
 
       .search {
         display: none;
+      }
+
+      .theme-toggle {
+        margin-left: auto;
       }
 
       nav {
@@ -719,6 +825,7 @@
   </style>
 </head>
 
+
 <body>
 
   <!-- HEADER -->
@@ -730,23 +837,40 @@
       <div class="logo-icon">🎓</div>
 
       <div class="logo-text">
-        <h1>AnuZzz<span>teach</span></h1>
-        <p>Learn • Explore • Grow</p>
+
+        <h1>
+          AnuZzz<span>teach</span>
+        </h1>
+
+        <p>
+          Learn • Explore • Grow
+        </p>
+
       </div>
 
     </a>
 
+
     <nav>
 
-      <a href="index.html" class="active">⌂ Home</a>
+      <a href="index.html" class="active">
+        ⌂ Home
+      </a>
 
-      <a href="posts.html">▣ Posts</a>
+      <a href="posts.html">
+        ▣ Posts
+      </a>
 
-      <a href="about.html">ⓘ About</a>
+      <a href="about.html">
+        ⓘ About
+      </a>
 
-      <a href="contact.html">◉ Contact</a>
+      <a href="contact.html">
+        ◉ Contact
+      </a>
 
     </nav>
+
 
     <div class="search">
 
@@ -759,6 +883,19 @@
       <span>⌕</span>
 
     </div>
+
+
+    <!-- DARK MODE BUTTON -->
+
+    <button
+      class="theme-toggle"
+      id="themeToggle"
+      onclick="toggleDarkMode()"
+      aria-label="Toggle dark mode">
+
+      🌙
+
+    </button>
 
   </header>
 
@@ -799,7 +936,11 @@
     <div class="section-header">
 
       <div class="section-title">
-        <h2>Explore Topics</h2>
+
+        <h2>
+          Explore Topics
+        </h2>
+
       </div>
 
       <p>
@@ -811,11 +952,18 @@
 
     <section class="topics">
 
-      <a href="posts.html?category=education" class="topic education">
 
-        <div class="topic-icon">🎓</div>
+      <a
+        href="posts.html?category=education"
+        class="topic education">
 
-        <h3>Education</h3>
+        <div class="topic-icon">
+          🎓
+        </div>
+
+        <h3>
+          Education
+        </h3>
 
         <p>
           Study tips, resources and more
@@ -824,11 +972,17 @@
       </a>
 
 
-      <a href="posts.html?category=technology" class="topic technology">
+      <a
+        href="posts.html?category=technology"
+        class="topic technology">
 
-        <div class="topic-icon">💻</div>
+        <div class="topic-icon">
+          💻
+        </div>
 
-        <h3>Technology</h3>
+        <h3>
+          Technology
+        </h3>
 
         <p>
           Tools, apps and online learning
@@ -837,11 +991,17 @@
       </a>
 
 
-      <a href="posts.html?category=life" class="topic life">
+      <a
+        href="posts.html?category=life"
+        class="topic life">
 
-        <div class="topic-icon">💡</div>
+        <div class="topic-icon">
+          💡
+        </div>
 
-        <h3>Life Skills</h3>
+        <h3>
+          Life Skills
+        </h3>
 
         <p>
           Better habits, positive mindset
@@ -850,11 +1010,17 @@
       </a>
 
 
-      <a href="posts.html?category=guides" class="topic guides">
+      <a
+        href="posts.html?category=guides"
+        class="topic guides">
 
-        <div class="topic-icon">📖</div>
+        <div class="topic-icon">
+          📖
+        </div>
 
-        <h3>Guides</h3>
+        <h3>
+          Guides
+        </h3>
 
         <p>
           Step by step help & tutorials
@@ -863,11 +1029,17 @@
       </a>
 
 
-      <a href="posts.html?category=motivation" class="topic motivation">
+      <a
+        href="posts.html?category=motivation"
+        class="topic motivation">
 
-        <div class="topic-icon">♡</div>
+        <div class="topic-icon">
+          ♡
+        </div>
 
-        <h3>Motivation</h3>
+        <h3>
+          Motivation
+        </h3>
 
         <p>
           Stay inspired, keep going
@@ -883,13 +1055,18 @@
     <div class="section-header">
 
       <div class="section-title">
-        <h2>Featured</h2>
+
+        <h2>
+          Featured
+        </h2>
+
       </div>
 
     </div>
 
 
     <section class="featured">
+
 
       <div class="featured-image">
 
@@ -918,9 +1095,13 @@
 
         <div class="meta">
 
-          <span>📅 Sep 23, 2026</span>
+          <span>
+            📅 Sep 23, 2026
+          </span>
 
-          <span>◷ 5 min read</span>
+          <span>
+            ◷ 5 min read
+          </span>
 
         </div>
 
@@ -942,18 +1123,27 @@
     <div class="section-header">
 
       <div class="section-title">
-        <h2>Latest Posts</h2>
+
+        <h2>
+          Latest Posts
+        </h2>
+
       </div>
 
-      <a href="posts.html"
+      <a
+        href="posts.html"
         style="font-size:13px;color:#5268e8;">
+
         View all posts →
+
       </a>
 
     </div>
 
 
-    <section class="latest" id="latestPosts">
+    <section
+      class="latest"
+      id="latestPosts">
 
 
       <!-- POST 1 -->
@@ -985,9 +1175,13 @@
 
           <div class="post-meta">
 
-            <span>📅 Apr 10, 2026</span>
+            <span>
+              📅 Apr 10, 2026
+            </span>
 
-            <span>◷ 2 min</span>
+            <span>
+              ◷ 2 min
+            </span>
 
           </div>
 
@@ -1025,9 +1219,13 @@
 
           <div class="post-meta">
 
-            <span>📅 Apr 15, 2026</span>
+            <span>
+              📅 Apr 15, 2026
+            </span>
 
-            <span>◷ 5 min</span>
+            <span>
+              ◷ 5 min
+            </span>
 
           </div>
 
@@ -1065,9 +1263,13 @@
 
           <div class="post-meta">
 
-            <span>📅 Apr 18, 2026</span>
+            <span>
+              📅 Apr 18, 2026
+            </span>
 
-            <span>◷ 4 min</span>
+            <span>
+              ◷ 4 min
+            </span>
 
           </div>
 
@@ -1105,11 +1307,16 @@
 
           <div class="post-meta">
 
-            <span>📅 Sep 23, 2026</span>
+            <span>
+              📅 Sep 23, 2026
+            </span>
 
-            <a href="posts/telegram-privacy-tricks.html"
+            <a
+              href="posts/telegram-privacy-tricks.html"
               style="color:#5268e8;font-weight:bold;">
+
               Read →
+
             </a>
 
           </div>
@@ -1118,6 +1325,7 @@
 
       </article>
 
+
     </section>
 
   </main>
@@ -1125,7 +1333,9 @@
 
   <!-- ABOUT -->
 
-  <section class="about" id="about">
+  <section
+    class="about"
+    id="about">
 
     <h2>
       About AnuZzzteach
@@ -1147,6 +1357,7 @@
 
     <div class="footer-top">
 
+
       <div class="footer-brand">
 
         <div class="footer-brand-icon">
@@ -1154,6 +1365,7 @@
         </div>
 
         <div>
+
           <h3>
             AnuZzz<span>teach</span>
           </h3>
@@ -1179,12 +1391,24 @@
 
       <div class="footer-social">
 
-        <span>▶</span>
-        <span>●</span>
-        <span>✈</span>
-        <span>◉</span>
+        <span>
+          ▶
+        </span>
+
+        <span>
+          ●
+        </span>
+
+        <span>
+          ✈
+        </span>
+
+        <span>
+          ◉
+        </span>
 
       </div>
+
 
     </div>
 
@@ -1197,13 +1421,21 @@
 
       <div class="footer-links">
 
-        <a href="index.html">Home</a>
+        <a href="index.html">
+          Home
+        </a>
 
-        <a href="posts.html">Posts</a>
+        <a href="posts.html">
+          Posts
+        </a>
 
-        <a href="about.html">About</a>
+        <a href="about.html">
+          About
+        </a>
 
-        <a href="contact.html">Contact</a>
+        <a href="contact.html">
+          Contact
+        </a>
 
       </div>
 
@@ -1212,15 +1444,21 @@
   </footer>
 
 
-  <!-- SEARCH SCRIPT -->
+  <!-- SCRIPTS -->
 
   <script>
+
+    /* =========================
+       SEARCH
+    ========================= */
 
     function searchPosts() {
 
       const input =
-        document.getElementById("searchInput")
-          .value.toLowerCase();
+        document
+          .getElementById("searchInput")
+          .value
+          .toLowerCase();
 
       const posts =
         document.querySelectorAll(".post-card");
@@ -1244,7 +1482,76 @@
 
     }
 
+
+    /* =========================
+       DARK MODE
+    ========================= */
+
+    function toggleDarkMode() {
+
+      document.body.classList.toggle("dark-mode");
+
+      const button =
+        document.getElementById("themeToggle");
+
+      if (
+        document.body.classList.contains("dark-mode")
+      ) {
+
+        button.textContent = "☀️";
+
+        localStorage.setItem(
+          "theme",
+          "dark"
+        );
+
+      } else {
+
+        button.textContent = "🌙";
+
+        localStorage.setItem(
+          "theme",
+          "light"
+        );
+
+      }
+
+    }
+
+
+    /* =========================
+       LOAD SAVED THEME
+    ========================= */
+
+    window.addEventListener(
+      "load",
+      function() {
+
+        const savedTheme =
+          localStorage.getItem("theme");
+
+        const button =
+          document.getElementById("themeToggle");
+
+        if (savedTheme === "dark") {
+
+          document.body.classList.add(
+            "dark-mode"
+          );
+
+          button.textContent = "☀️";
+
+        } else {
+
+          button.textContent = "🌙";
+
+        }
+
+      }
+    );
+
   </script>
+
 
 </body>
 
