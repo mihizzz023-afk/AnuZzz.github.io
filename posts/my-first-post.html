@@ -1,57 +1,248 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>My First Post - AnuZzzteach</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description"
+    content="Welcome to AnuZzzteach. Read the first article from the blog.">
 
   <style>
-    body{
-      font-family: Arial;
-      max-width: 800px;
-      margin:auto;
-      padding:20px;
-      line-height:1.8;
-      background:#f5f5f5;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
     }
 
-    .post{
-      background:white;
-      padding:30px;
-      border-radius:15px;
-      box-shadow:0 0 10px rgba(0,0,0,0.1);
+    body {
+      background: #f4f6f8;
+      color: #222;
+      line-height: 1.8;
     }
 
-    h1{
-      color:#111;
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #111, #333);
+      color: white;
+      text-align: center;
+      padding: 35px 20px;
     }
 
-    a{
-      text-decoration:none;
-      color:white;
-      background:black;
-      padding:10px 15px;
-      border-radius:8px;
+    header h1 {
+      font-size: 34px;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #ccc;
+    }
+
+    /* NAV */
+    nav {
+      background: white;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #222;
+      margin: 0 12px;
+      font-weight: bold;
+    }
+
+    /* ARTICLE */
+    .article-container {
+      max-width: 850px;
+      margin: 45px auto;
+      padding: 0 20px;
+    }
+
+    .article {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    }
+
+    .category {
+      display: inline-block;
+      background: #111;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .article h2 {
+      font-size: 34px;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+
+    .date {
+      color: #888;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .article p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .article h3 {
+      margin-top: 28px;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    /* BUTTONS */
+    .buttons {
+      margin-top: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      padding: 11px 18px;
+      border-radius: 8px;
+      margin-right: 8px;
+    }
+
+    .button:hover {
+      background: #333;
+    }
+
+    /* FOOTER */
+    footer {
+      margin-top: 60px;
+      background: #080808;
+      color: #888;
+      text-align: center;
+      padding: 25px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+
+      .article {
+        padding: 25px;
+      }
+
+      .article h2 {
+        font-size: 28px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 13px;
+      }
+
+      .button {
+        margin-bottom: 8px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<div class="post">
+  <!-- HEADER -->
+  <header>
+    <h1>AnuZzzteach</h1>
+    <p>Learn • Explore • Grow</p>
+  </header>
 
-<h1>My First Post</h1>
 
-<p>
-Welcome to AnuZzzteach.
-This is my first blog post.
-More useful articles will be published soon.
-</p>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="../index.html">Home</a>
+    <a href="../posts.html">Posts</a>
+    <a href="../about.html">About</a>
+  </nav>
 
-<br>
 
-<a href="../index.html">Back to Home</a>
+  <!-- ARTICLE -->
+  <main class="article-container">
 
-</div>
+    <article class="article">
+
+      <span class="category">
+        Welcome
+      </span>
+
+      <h2>My First Post</h2>
+
+      <p class="date">
+        Published on September 23, 2026
+      </p>
+
+      <p>
+        Welcome to AnuZzzteach!
+      </p>
+
+      <p>
+        This is the first blog post on AnuZzzteach.
+        This website was created to share useful knowledge,
+        interesting ideas and helpful information.
+      </p>
+
+      <h3>What is AnuZzzteach?</h3>
+
+      <p>
+        AnuZzzteach is a simple place where you can discover
+        new things, learn useful information and explore
+        different topics.
+      </p>
+
+      <h3>More Posts Coming Soon</h3>
+
+      <p>
+        More articles and useful content will be published
+        on the website soon.
+      </p>
+
+      <p>
+        Thank you for visiting AnuZzzteach. 🚀
+      </p>
+
+
+      <!-- BUTTONS -->
+      <div class="buttons">
+
+        <a href="../posts.html" class="button">
+          ← Back to Posts
+        </a>
+
+        <a href="../index.html" class="button">
+          Home
+        </a>
+
+      </div>
+
+    </article>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <p>
+      © 2026 AnuZzzteach. All rights reserved.
+    </p>
+
+  </footer>
 
 </body>
+
 </html>
