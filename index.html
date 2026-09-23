@@ -31,12 +31,12 @@
   <meta property="og:url"
     content="https://mihizzz023-afk.github.io/AnuZzz.github.io/">
 
-  <!-- Social Preview Image -->
   <meta property="og:image"
     content="https://mihizzz023-afk.github.io/AnuZzz.github.io/images/preview.svg">
 
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+
 
   <style>
 
@@ -68,12 +68,13 @@
       display: block;
     }
 
+
     /* =========================
        HEADER
     ========================= */
 
     header {
-      height: 70px;
+      min-height: 70px;
       background: #071426;
       color: white;
       display: flex;
@@ -109,6 +110,7 @@
       margin-top: 4px;
     }
 
+
     /* =========================
        NAVIGATION
     ========================= */
@@ -116,7 +118,7 @@
     nav {
       display: flex;
       align-items: center;
-      gap: 28px;
+      gap: 25px;
       flex: 1;
     }
 
@@ -126,6 +128,7 @@
       transition: 0.25s;
       padding: 24px 0;
       position: relative;
+      white-space: nowrap;
     }
 
     nav a:hover,
@@ -144,6 +147,7 @@
       border-radius: 5px;
     }
 
+
     /* =========================
        SEARCH
     ========================= */
@@ -156,6 +160,7 @@
       align-items: center;
       gap: 8px;
       width: 200px;
+      flex-shrink: 0;
     }
 
     .search input {
@@ -170,6 +175,7 @@
     .search input::placeholder {
       color: #c5ccda;
     }
+
 
     /* =========================
        DARK MODE BUTTON
@@ -195,6 +201,7 @@
       background: #354b68;
       transform: translateY(-2px);
     }
+
 
     /* =========================
        HERO
@@ -268,6 +275,7 @@
       background: #7183ff;
     }
 
+
     /* =========================
        MAIN
     ========================= */
@@ -305,6 +313,7 @@
       font-size: 13px;
     }
 
+
     /* =========================
        TOPICS
     ========================= */
@@ -313,7 +322,7 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 15px;
-      margin-bottom: 28px;
+      margin-bottom: 38px;
     }
 
     .topic {
@@ -367,6 +376,7 @@
     .motivation {
       background: #f5eaff;
     }
+
 
     /* =========================
        FEATURED POST
@@ -434,6 +444,104 @@
       font-size: 13px;
       font-weight: bold;
     }
+
+
+    /* =========================
+       TECH LAB
+    ========================= */
+
+    .tech-lab-preview {
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(
+          135deg,
+          #08182b,
+          #101f3b,
+          #182b50
+        );
+      color: white;
+      border-radius: 16px;
+      padding: 45px 35px;
+      margin: 10px 0 42px;
+      text-align: center;
+      box-shadow: 0 12px 35px rgba(8,24,43,0.18);
+    }
+
+    .tech-lab-preview::before {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      background: rgba(97,117,255,0.12);
+      top: -100px;
+      left: -70px;
+    }
+
+    .tech-lab-preview::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+      background: rgba(113,136,255,0.08);
+      bottom: -140px;
+      right: -80px;
+    }
+
+    .tech-lab-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .tech-lab-icon {
+      font-size: 48px;
+      margin-bottom: 8px;
+    }
+
+    .tech-lab-badge {
+      display: inline-block;
+      background: rgba(97,117,255,0.18);
+      color: #aeb9ff;
+      border: 1px solid rgba(174,185,255,0.25);
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 10px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .tech-lab-preview h2 {
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+    .tech-lab-preview p {
+      max-width: 600px;
+      margin: 0 auto 22px;
+      color: #c7d0df;
+      font-size: 14px;
+    }
+
+    .tech-lab-button {
+      display: inline-block;
+      background: #6175ff;
+      color: white;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: bold;
+      transition: 0.3s;
+      box-shadow: 0 8px 22px rgba(97,117,255,0.25);
+    }
+
+    .tech-lab-button:hover {
+      transform: translateY(-3px);
+      background: #7183ff;
+    }
+
 
     /* =========================
        LATEST POSTS
@@ -510,6 +618,7 @@
       justify-content: space-between;
     }
 
+
     /* =========================
        ABOUT
     ========================= */
@@ -532,6 +641,7 @@
       color: #c7cfdb;
       font-size: 14px;
     }
+
 
     /* =========================
        FOOTER
@@ -598,6 +708,7 @@
       display: flex;
       gap: 15px;
     }
+
 
     /* =========================
        DARK MODE
@@ -667,6 +778,7 @@
       background: #354b68;
     }
 
+
     /* =========================
        MOBILE
     ========================= */
@@ -688,7 +800,7 @@
         order: 3;
         width: 100%;
         justify-content: center;
-        gap: 20px;
+        gap: 18px;
       }
 
       nav a {
@@ -717,6 +829,7 @@
 
     }
 
+
     @media (max-width: 600px) {
 
       header {
@@ -737,11 +850,11 @@
 
       nav {
         justify-content: space-between;
-        gap: 8px;
+        gap: 5px;
       }
 
       nav a {
-        font-size: 12px;
+        font-size: 11px;
       }
 
       .hero {
@@ -796,6 +909,22 @@
         font-size: 23px;
       }
 
+      .tech-lab-preview {
+        padding: 38px 20px;
+      }
+
+      .tech-lab-icon {
+        font-size: 42px;
+      }
+
+      .tech-lab-preview h2 {
+        font-size: 25px;
+      }
+
+      .tech-lab-preview p {
+        font-size: 13px;
+      }
+
       .latest {
         grid-template-columns: 1fr;
       }
@@ -818,23 +947,30 @@
 
       .footer-links {
         justify-content: center;
+        flex-wrap: wrap;
       }
 
     }
 
   </style>
+
 </head>
 
 
 <body>
 
-  <!-- HEADER -->
+
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header>
 
     <a href="index.html" class="logo">
 
-      <div class="logo-icon">🎓</div>
+      <div class="logo-icon">
+        🎓
+      </div>
 
       <div class="logo-text">
 
@@ -850,6 +986,8 @@
 
     </a>
 
+
+    <!-- NAVIGATION -->
 
     <nav>
 
@@ -869,8 +1007,16 @@
         ◉ Contact
       </a>
 
+      <!-- NEW TECH LAB LINK -->
+
+      <a href="tech-lab.html">
+        🧪 Tech Lab
+      </a>
+
     </nav>
 
+
+    <!-- SEARCH -->
 
     <div class="search">
 
@@ -885,7 +1031,7 @@
     </div>
 
 
-    <!-- DARK MODE BUTTON -->
+    <!-- DARK MODE -->
 
     <button
       class="theme-toggle"
@@ -900,7 +1046,9 @@
   </header>
 
 
-  <!-- HERO -->
+  <!-- =========================
+       HERO
+  ========================= -->
 
   <section class="hero">
 
@@ -919,8 +1067,12 @@
         and create a brighter future.
       </p>
 
-      <a href="posts.html" class="hero-button">
+      <a
+        href="posts.html"
+        class="hero-button">
+
         Explore Posts →
+
       </a>
 
     </div>
@@ -931,7 +1083,9 @@
   <main>
 
 
-    <!-- TOPICS -->
+    <!-- =========================
+         EXPLORE TOPICS
+    ========================= -->
 
     <div class="section-header">
 
@@ -1050,7 +1204,9 @@
     </section>
 
 
-    <!-- FEATURED POST -->
+    <!-- =========================
+         FEATURED
+    ========================= -->
 
     <div class="section-header">
 
@@ -1118,7 +1274,47 @@
     </section>
 
 
-    <!-- LATEST POSTS -->
+    <!-- =========================
+         TECH LAB PREVIEW
+    ========================= -->
+
+    <section class="tech-lab-preview">
+
+      <div class="tech-lab-content">
+
+        <div class="tech-lab-icon">
+          🧪
+        </div>
+
+        <span class="tech-lab-badge">
+          ANUZZZ TECH LAB
+        </span>
+
+        <h2>
+          Useful Tools, All in One Place
+        </h2>
+
+        <p>
+          Try useful browser tools for studying,
+          writing, coding and everyday tech tasks.
+        </p>
+
+        <a
+          href="tech-lab.html"
+          class="tech-lab-button">
+
+          Explore Tech Lab →
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         LATEST POSTS
+    ========================= -->
 
     <div class="section-header">
 
@@ -1169,8 +1365,8 @@
           </h3>
 
           <p>
-            Welcome to AnuZzzteach. This is the beginning
-            of our learning journey.
+            Welcome to AnuZzzteach.
+            This is the beginning of our learning journey.
           </p>
 
           <div class="post-meta">
@@ -1331,7 +1527,9 @@
   </main>
 
 
-  <!-- ABOUT -->
+  <!-- =========================
+       ABOUT
+  ========================= -->
 
   <section
     class="about"
@@ -1342,16 +1540,19 @@
     </h2>
 
     <p>
-      AnuZzzteach is a simple place to learn, explore
-      and discover useful information. We share helpful
-      articles, technology tips, guides and interesting ideas
-      to help you learn something new every day.
+      AnuZzzteach is a simple place to learn,
+      explore and discover useful information.
+      We share helpful articles, technology tips,
+      guides and interesting ideas to help you
+      learn something new every day.
     </p>
 
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -1383,29 +1584,17 @@
 
         “Better knowledge,
         <br>
-        Better tomorrow.”
-        ♡
+        Better tomorrow.” ♡
 
       </div>
 
 
       <div class="footer-social">
 
-        <span>
-          ▶
-        </span>
-
-        <span>
-          ●
-        </span>
-
-        <span>
-          ✈
-        </span>
-
-        <span>
-          ◉
-        </span>
+        <span>▶</span>
+        <span>●</span>
+        <span>✈</span>
+        <span>◉</span>
 
       </div>
 
@@ -1418,6 +1607,7 @@
       <div>
         © 2026 AnuZzzteach. All rights reserved.
       </div>
+
 
       <div class="footer-links">
 
@@ -1437,6 +1627,10 @@
           Contact
         </a>
 
+        <a href="tech-lab.html">
+          Tech Lab
+        </a>
+
       </div>
 
     </div>
@@ -1444,7 +1638,9 @@
   </footer>
 
 
-  <!-- SCRIPTS -->
+  <!-- =========================
+       SCRIPTS
+  ========================= -->
 
   <script>
 
