@@ -2,64 +2,33 @@
 <html lang="en">
 
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE SEARCH CONSOLE VERIFICATION -->
-  <meta
-    name="google-site-verification"
-    content="Z6iEXXSZoqJgUCfK6LhIf2n05jvi_sfqcZxLKiAwyzk"
-  >
+  <meta name="google-site-verification"
+    content="Z6iEXXSZoqJgUCfK6LhIf2n05jvi_sfqcZxLKiAwyzk">
 
-  <!-- SEO -->
   <title>AnuZzzteach - Learn, Explore & Grow</title>
 
-  <meta
-    name="description"
-    content="AnuZzzteach is a simple educational blog where you can discover useful knowledge, interesting ideas and helpful information."
-  >
+  <meta name="description"
+    content="AnuZzzteach is a simple educational blog where you can discover useful knowledge, technology tips, guides and interesting ideas.">
 
   <meta name="robots" content="index, follow">
   <meta name="author" content="AnuZzzteach">
 
-  <!-- CANONICAL -->
-  <link
-    rel="canonical"
-    href="https://mihizzz023-afk.github.io/AnuZzz.github.io/"
-  >
+  <link rel="canonical"
+    href="https://mihizzz023-afk.github.io/AnuZzz.github.io/">
 
-  <!-- OPEN GRAPH -->
-  <meta
-    property="og:title"
-    content="AnuZzzteach - Learn, Explore & Grow"
-  >
+  <meta property="og:title"
+    content="AnuZzzteach - Learn, Explore & Grow">
 
-  <meta
-    property="og:description"
-    content="Discover useful knowledge, interesting ideas and helpful information on AnuZzzteach."
-  >
+  <meta property="og:description"
+    content="Discover useful knowledge, technology tips, guides and interesting ideas on AnuZzzteach.">
 
-  <meta
-    property="og:type"
-    content="website"
-  >
+  <meta property="og:type" content="website">
 
-  <meta
-    property="og:url"
-    content="https://mihizzz023-afk.github.io/AnuZzz.github.io/"
-  >
-
-  <!-- STRUCTURED DATA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "AnuZzzteach",
-    "url": "https://mihizzz023-afk.github.io/AnuZzz.github.io/",
-    "description": "AnuZzzteach is a simple educational blog for useful knowledge, interesting ideas and helpful information."
-  }
-  </script>
+  <meta property="og:url"
+    content="https://mihizzz023-afk.github.io/AnuZzz.github.io/">
 
   <style>
 
@@ -67,7 +36,6 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
     }
 
     html {
@@ -75,286 +43,716 @@
     }
 
     body {
-      background: #f4f6f8;
-      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f9fc;
+      color: #172033;
+      line-height: 1.6;
     }
 
-    /* HEADER */
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
-      background: linear-gradient(135deg, #0b0b0b, #333);
+      height: 70px;
+      background: #071426;
       color: white;
-      padding: 32px 20px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      padding: 0 6%;
+      gap: 40px;
     }
 
-    header h1 {
-      font-size: 38px;
-      letter-spacing: 1px;
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 280px;
     }
 
-    header p {
-      margin-top: 8px;
-      color: #ccc;
-      font-size: 15px;
+    .logo-icon {
+      font-size: 34px;
     }
 
-    /* NAVIGATION */
+    .logo-text h1 {
+      font-size: 21px;
+      line-height: 1;
+      letter-spacing: -0.5px;
+    }
+
+    .logo-text h1 span {
+      color: #7188ff;
+    }
+
+    .logo-text p {
+      color: #c7ceda;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+
+    /* NAV */
 
     nav {
-      background: white;
-      padding: 16px;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      flex: 1;
     }
 
     nav a {
-      text-decoration: none;
-      color: #222;
-      margin: 0 13px;
-      font-weight: bold;
+      color: #d9deea;
       font-size: 14px;
-    }
-
-    nav a:hover {
-      color: #777;
-    }
-
-    /* HERO */
-
-    .hero {
+      transition: 0.25s;
+      padding: 24px 0;
       position: relative;
-      min-height: 520px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 20px;
-
-      background:
-        linear-gradient(
-          rgba(0,0,0,0.58),
-          rgba(0,0,0,0.68)
-        ),
-        url("https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1600&q=85");
-
-      background-size: cover;
-      background-position: center;
     }
 
-    .hero-content {
-      max-width: 750px;
+    nav a:hover,
+    nav a.active {
       color: white;
     }
 
-    .hero-content h2 {
-      font-size: 48px;
-      margin-bottom: 18px;
-      line-height: 1.2;
+    nav a.active::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      background: #6678ff;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 5px;
     }
 
-    .hero-content p {
+    /* SEARCH */
+
+    .search {
+      background: #263950;
+      border-radius: 12px;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: 200px;
+    }
+
+    .search input {
+      width: 100%;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: white;
+      font-size: 13px;
+    }
+
+    .search input::placeholder {
+      color: #c5ccda;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 400px;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(3, 13, 28, 0.86),
+          rgba(3, 13, 28, 0.50),
+          rgba(3, 13, 28, 0.12)
+        ),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=90");
+
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      padding: 70px 6%;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .welcome {
+      font-family: cursive;
+      font-size: 27px;
+      color: #dbe1ff;
+      margin-bottom: 2px;
+    }
+
+    .hero h2 {
+      font-size: 64px;
+      line-height: 1.05;
+      margin-bottom: 18px;
+      letter-spacing: -2px;
+    }
+
+    .hero h2 span {
+      color: #6f82ff;
+    }
+
+    .hero p {
       font-size: 18px;
-      line-height: 1.8;
-      color: #eee;
+      color: #f0f3f8;
+      max-width: 470px;
+      margin-bottom: 28px;
     }
 
     .hero-button {
       display: inline-block;
-      margin-top: 28px;
-      padding: 14px 28px;
-      background: white;
-      color: #111;
-      text-decoration: none;
-      border-radius: 9px;
+      background: #6175ff;
+      color: white;
+      padding: 13px 23px;
+      border-radius: 11px;
       font-weight: bold;
       transition: 0.3s;
+      box-shadow: 0 8px 25px rgba(97,117,255,0.3);
     }
 
     .hero-button:hover {
       transform: translateY(-3px);
-      background: #eee;
+      background: #7183ff;
     }
 
-    /* POSTS */
+    /* =========================
+       MAIN
+    ========================= */
 
-    .posts {
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 0 20px;
+    main {
+      max-width: 1120px;
+      margin: auto;
+      padding: 30px 25px 70px;
     }
 
-    .posts-title {
-      text-align: center;
-      margin-bottom: 35px;
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin: 0 0 22px;
     }
 
-    .posts-title h2 {
-      font-size: 32px;
+    .section-title h2 {
+      font-size: 27px;
+      color: #172033;
     }
 
-    .posts-title p {
-      color: #777;
-      margin-top: 8px;
-    }
-
-    .post {
-      background: white;
-      margin-bottom: 25px;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
-    }
-
-    .post-image {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
+    .section-title h2::after {
+      content: "";
       display: block;
+      width: 38px;
+      height: 3px;
+      background: #6175ff;
+      margin-top: 8px;
+      border-radius: 5px;
     }
 
-    .post-content {
-      padding: 28px;
+    .section-header p {
+      color: #687181;
+      font-size: 13px;
     }
 
-    .post h3 {
-      font-size: 24px;
+    /* =========================
+       TOPICS
+    ========================= */
+
+    .topics {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 15px;
+      margin-bottom: 28px;
+    }
+
+    .topic {
+      min-height: 135px;
+      border-radius: 10px;
+      padding: 23px 15px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      transition: 0.3s;
+    }
+
+    .topic:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    .topic-icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .topic h3 {
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .topic p {
+      font-size: 12px;
+      color: #626b78;
+      line-height: 1.4;
+    }
+
+    .education {
+      background: #eaf3ff;
+    }
+
+    .technology {
+      background: #e2faf5;
+    }
+
+    .life {
+      background: #fff7df;
+    }
+
+    .guides {
+      background: #ffedf2;
+    }
+
+    .motivation {
+      background: #f5eaff;
+    }
+
+    /* =========================
+       FEATURED POST
+    ========================= */
+
+    .featured {
+      background: #08182b;
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: center;
+      margin-bottom: 38px;
+    }
+
+    .featured-image {
+      height: 260px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .featured-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #6175ff;
+      padding: 5px 12px;
+      border-radius: 7px;
+      font-size: 11px;
+      font-weight: bold;
       margin-bottom: 12px;
     }
 
-    .post p {
-      color: #666;
-      line-height: 1.8;
+    .featured-content h2 {
+      font-size: 27px;
+      line-height: 1.2;
+      margin-bottom: 13px;
     }
 
-    .read-more {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 11px 20px;
-      background: #111;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
+    .featured-content p {
+      color: #c9d1dc;
+      font-size: 14px;
+      margin-bottom: 15px;
     }
 
-    .read-more:hover {
-      background: #333;
-    }
-
-    /* ABOUT */
-
-    .about {
-      background: #111;
-      color: white;
-      text-align: center;
-      padding: 65px 20px;
-    }
-
-    .about h2 {
-      font-size: 32px;
+    .meta {
+      display: flex;
+      gap: 15px;
+      color: #aeb8c7;
+      font-size: 11px;
       margin-bottom: 18px;
     }
 
-    .about p {
-      max-width: 700px;
-      margin: auto;
-      color: #ccc;
-      line-height: 1.9;
-      font-size: 16px;
+    .featured-button {
+      display: inline-block;
+      background: #6175ff;
+      padding: 11px 17px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: bold;
     }
 
-    /* FOOTER */
+    /* =========================
+       LATEST POSTS
+    ========================= */
 
-    footer {
-      background: #050505;
-      color: #888;
+    .latest {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+    }
+
+    .post-card {
+      background: white;
+      border-radius: 9px;
+      overflow: hidden;
+      box-shadow: 0 3px 15px rgba(20,30,50,0.08);
+      transition: 0.3s;
+      border: 1px solid #edf0f5;
+    }
+
+    .post-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(20,30,50,0.13);
+    }
+
+    .post-card-image {
+      height: 145px;
+      overflow: hidden;
+    }
+
+    .post-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .post-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .post-body {
+      padding: 15px;
+    }
+
+    .category {
+      display: inline-block;
+      color: #5268e8;
+      background: #edf0ff;
+      font-size: 10px;
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 5px;
+      margin-bottom: 8px;
+    }
+
+    .post-body h3 {
+      font-size: 15px;
+      line-height: 1.3;
+      margin-bottom: 7px;
+    }
+
+    .post-body p {
+      font-size: 12px;
+      color: #6c7480;
+      line-height: 1.5;
+      margin-bottom: 13px;
+    }
+
+    .post-meta {
+      font-size: 10px;
+      color: #89919e;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: #08182b;
+      color: white;
+      padding: 60px 20px;
       text-align: center;
-      padding: 28px 15px;
+    }
+
+    .about h2 {
+      font-size: 30px;
+      margin-bottom: 12px;
+    }
+
+    .about p {
+      max-width: 650px;
+      margin: auto;
+      color: #c7cfdb;
       font-size: 14px;
     }
 
-    /* MOBILE */
+    /* =========================
+       FOOTER
+    ========================= */
 
-    @media (max-width: 600px) {
+    footer {
+      background: #071426;
+      color: white;
+      padding: 30px 6%;
+    }
 
-      header h1 {
-        font-size: 30px;
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-brand {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .footer-brand-icon {
+      font-size: 32px;
+    }
+
+    .footer-brand h3 {
+      font-size: 18px;
+    }
+
+    .footer-brand span {
+      color: #7188ff;
+    }
+
+    .footer-brand p {
+      color: #aab3c0;
+      font-size: 11px;
+    }
+
+    .footer-quote {
+      font-family: cursive;
+      color: #b8c0d1;
+      text-align: center;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 15px;
+      font-size: 18px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #26364b;
+      margin-top: 25px;
+      padding-top: 17px;
+      display: flex;
+      justify-content: space-between;
+      color: #9ba5b4;
+      font-size: 11px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      header {
+        height: auto;
+        padding: 16px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+      }
+
+      .logo {
+        min-width: auto;
+      }
+
+      nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
       }
 
       nav a {
-        margin: 0 7px;
-        font-size: 13px;
+        padding: 8px 0;
+      }
+
+      nav a.active::after {
+        bottom: -3px;
+      }
+
+      .search {
+        margin-left: auto;
+      }
+
+      .hero h2 {
+        font-size: 48px;
+      }
+
+      .topics {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .latest {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      header {
+        padding: 14px 18px;
+      }
+
+      .logo-text h1 {
+        font-size: 19px;
+      }
+
+      .search {
+        display: none;
+      }
+
+      nav {
+        justify-content: space-between;
+        gap: 8px;
+      }
+
+      nav a {
+        font-size: 12px;
       }
 
       .hero {
-        min-height: 480px;
-        padding: 60px 20px;
+        min-height: 470px;
+        padding: 55px 22px;
+        background-position: center;
       }
 
-      .hero-content h2 {
-        font-size: 34px;
+      .welcome {
+        font-size: 22px;
       }
 
-      .hero-content p {
+      .hero h2 {
+        font-size: 42px;
+        letter-spacing: -1px;
+      }
+
+      .hero p {
         font-size: 15px;
       }
 
-      .post-image {
+      main {
+        padding: 30px 16px 55px;
+      }
+
+      .section-header {
+        display: block;
+      }
+
+      .section-header p {
+        margin-top: 8px;
+      }
+
+      .topics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .featured {
+        grid-template-columns: 1fr;
+        padding: 14px;
+      }
+
+      .featured-image {
+        height: 210px;
+      }
+
+      .featured-content {
+        padding: 4px 5px 10px;
+      }
+
+      .featured-content h2 {
+        font-size: 23px;
+      }
+
+      .latest {
+        grid-template-columns: 1fr;
+      }
+
+      .post-card-image {
         height: 190px;
       }
 
-      .post-content {
-        padding: 22px;
+      .footer-top {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
       }
 
-      .posts-title h2 {
-        font-size: 28px;
+      .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+
+      .footer-links {
+        justify-content: center;
       }
 
     }
 
   </style>
-
 </head>
 
-
 <body>
-
 
   <!-- HEADER -->
 
   <header>
 
-    <h1>AnuZzzteach</h1>
+    <a href="index.html" class="logo">
 
-    <p>
-      Learn • Explore • Grow
-    </p>
+      <div class="logo-icon">🎓</div>
+
+      <div class="logo-text">
+        <h1>AnuZzz<span>teach</span></h1>
+        <p>Learn • Explore • Grow</p>
+      </div>
+
+    </a>
+
+    <nav>
+
+      <a href="index.html" class="active">⌂ Home</a>
+
+      <a href="posts.html">▣ Posts</a>
+
+      <a href="about.html">ⓘ About</a>
+
+      <a href="contact.html">◉ Contact</a>
+
+    </nav>
+
+    <div class="search">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search posts..."
+        onkeyup="searchPosts()">
+
+      <span>⌕</span>
+
+    </div>
 
   </header>
-
-
-  <!-- NAVIGATION -->
-
-  <nav>
-
-    <a href="index.html">
-      Home
-    </a>
-
-    <a href="posts.html">
-      Posts
-    </a>
-
-    <a href="about.html">
-      About
-    </a>
-
-  </nav>
 
 
   <!-- HERO -->
@@ -363,13 +761,17 @@
 
     <div class="hero-content">
 
+      <div class="welcome">
+        Welcome to
+      </div>
+
       <h2>
-        Learn Something New Every Day
+        AnuZzz<span>teach</span>
       </h2>
 
       <p>
-        Discover useful knowledge, interesting ideas and simple
-        explanations designed to help you learn, explore and grow.
+        Learn new things, build better skills,
+        and create a brighter future.
       </p>
 
       <a href="posts.html" class="hero-button">
@@ -381,47 +783,142 @@
   </section>
 
 
-  <!-- POSTS -->
+  <main>
 
-  <section class="posts" id="posts">
 
-    <div class="posts-title">
+    <!-- TOPICS -->
 
-      <h2>
-        Latest Posts
-      </h2>
+    <div class="section-header">
+
+      <div class="section-title">
+        <h2>Explore Topics</h2>
+      </div>
 
       <p>
-        Explore useful articles from AnuZzzteach.
+        Choose what interests you and start learning today.
       </p>
 
     </div>
 
 
-    <!-- POST 1 -->
+    <section class="topics">
 
-    <article class="post">
+      <a href="posts.html?category=education" class="topic education">
 
-      <img
-        class="post-image"
-        src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=85"
-        alt="Books and learning">
+        <div class="topic-icon">🎓</div>
 
-      <div class="post-content">
-
-        <h3>
-          My First Post
-        </h3>
+        <h3>Education</h3>
 
         <p>
-          Welcome to AnuZzzteach. This is the first blog post
-          on the website. More useful articles and interesting
-          content will be published soon.
+          Study tips, resources and more
         </p>
 
+      </a>
+
+
+      <a href="posts.html?category=technology" class="topic technology">
+
+        <div class="topic-icon">💻</div>
+
+        <h3>Technology</h3>
+
+        <p>
+          Tools, apps and online learning
+        </p>
+
+      </a>
+
+
+      <a href="posts.html?category=life" class="topic life">
+
+        <div class="topic-icon">💡</div>
+
+        <h3>Life Skills</h3>
+
+        <p>
+          Better habits, positive mindset
+        </p>
+
+      </a>
+
+
+      <a href="posts.html?category=guides" class="topic guides">
+
+        <div class="topic-icon">📖</div>
+
+        <h3>Guides</h3>
+
+        <p>
+          Step by step help & tutorials
+        </p>
+
+      </a>
+
+
+      <a href="posts.html?category=motivation" class="topic motivation">
+
+        <div class="topic-icon">♡</div>
+
+        <h3>Motivation</h3>
+
+        <p>
+          Stay inspired, keep going
+        </p>
+
+      </a>
+
+    </section>
+
+
+    <!-- FEATURED POST -->
+
+    <div class="section-header">
+
+      <div class="section-title">
+        <h2>Featured</h2>
+      </div>
+
+    </div>
+
+
+    <section class="featured">
+
+      <div class="featured-image">
+
+        <img
+          src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=90"
+          alt="Learning and technology">
+
+      </div>
+
+
+      <div class="featured-content">
+
+        <span class="badge">
+          Featured Post
+        </span>
+
+        <h2>
+          Top 5 Telegram Privacy Tricks You Should Enable Right Now
+        </h2>
+
+        <p>
+          Simple Telegram privacy settings that can help
+          you protect your account and control who can
+          see or contact you.
+        </p>
+
+        <div class="meta">
+
+          <span>📅 Sep 23, 2026</span>
+
+          <span>◷ 5 min read</span>
+
+        </div>
+
         <a
-          href="posts/my-first-post.html"
-          class="read-more">
+          href="posts/telegram-privacy-tricks.html"
+          class="featured-button">
 
           Read More →
 
@@ -429,58 +926,208 @@
 
       </div>
 
-    </article>
+    </section>
 
 
-    <!-- POST 2 -->
+    <!-- LATEST POSTS -->
 
-    <article class="post">
+    <div class="section-header">
 
-      <img
-        class="post-image"
-        src="https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=1200&q=85"
-        alt="Learning and studying">
-
-      <div class="post-content">
-
-        <h3>
-          How to Learn Better
-        </h3>
-
-        <p>
-          Simple and practical tips that can help you make
-          learning easier, more effective and more enjoyable.
-        </p>
-
-        <a
-          href="posts/second-post.html"
-          class="read-more">
-
-          Read More →
-
-        </a>
-
+      <div class="section-title">
+        <h2>Latest Posts</h2>
       </div>
 
-    </article>
+      <a href="posts.html"
+        style="font-size:13px;color:#5268e8;">
+        View all posts →
+      </a>
 
-  </section>
+    </div>
+
+
+    <section class="latest" id="latestPosts">
+
+
+      <!-- POST 1 -->
+
+      <article class="post-card">
+
+        <div class="post-card-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=900&q=85"
+            alt="Books and learning">
+
+        </div>
+
+        <div class="post-body">
+
+          <span class="category">
+            Education
+          </span>
+
+          <h3>
+            My First Post
+          </h3>
+
+          <p>
+            Welcome to AnuZzzteach. This is the beginning
+            of our learning journey.
+          </p>
+
+          <div class="post-meta">
+
+            <span>📅 Apr 10, 2026</span>
+
+            <span>◷ 2 min</span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- POST 2 -->
+
+      <article class="post-card">
+
+        <div class="post-card-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=900&q=85"
+            alt="Learning">
+
+        </div>
+
+        <div class="post-body">
+
+          <span class="category">
+            Education
+          </span>
+
+          <h3>
+            How to Learn Better
+          </h3>
+
+          <p>
+            Simple and practical ways to make learning
+            easier and more effective.
+          </p>
+
+          <div class="post-meta">
+
+            <span>📅 Apr 15, 2026</span>
+
+            <span>◷ 5 min</span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- POST 3 -->
+
+      <article class="post-card">
+
+        <div class="post-card-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=900&q=85"
+            alt="Technology">
+
+        </div>
+
+        <div class="post-body">
+
+          <span class="category">
+            Technology
+          </span>
+
+          <h3>
+            Technology Tips
+          </h3>
+
+          <p>
+            Useful technology tips, apps and tools
+            you should know about.
+          </p>
+
+          <div class="post-meta">
+
+            <span>📅 Apr 18, 2026</span>
+
+            <span>◷ 4 min</span>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- POST 4 -->
+
+      <article class="post-card">
+
+        <div class="post-card-image">
+
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=85"
+            alt="Technology and security">
+
+        </div>
+
+        <div class="post-body">
+
+          <span class="category">
+            Guides
+          </span>
+
+          <h3>
+            Telegram Privacy Tricks
+          </h3>
+
+          <p>
+            Five useful Telegram privacy settings
+            you should know about.
+          </p>
+
+          <div class="post-meta">
+
+            <span>📅 Sep 23, 2026</span>
+
+            <a href="posts/telegram-privacy-tricks.html"
+              style="color:#5268e8;font-weight:bold;">
+              Read →
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </section>
+
+  </main>
 
 
   <!-- ABOUT -->
 
-  <section
-    class="about"
-    id="about">
+  <section class="about" id="about">
 
     <h2>
       About AnuZzzteach
     </h2>
 
     <p>
-      AnuZzzteach is a simple place to learn, explore and
-      discover useful information. New articles, ideas and
-      helpful content will be added over time.
+      AnuZzzteach is a simple place to learn, explore
+      and discover useful information. We share helpful
+      articles, technology tips, guides and interesting ideas
+      to help you learn something new every day.
     </p>
 
   </section>
@@ -490,12 +1137,105 @@
 
   <footer>
 
-    <p>
-      © 2026 AnuZzzteach. All rights reserved.
-    </p>
+    <div class="footer-top">
+
+      <div class="footer-brand">
+
+        <div class="footer-brand-icon">
+          🎓
+        </div>
+
+        <div>
+          <h3>
+            AnuZzz<span>teach</span>
+          </h3>
+
+          <p>
+            Learn • Explore • Grow
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="footer-quote">
+
+        “Better knowledge,
+        <br>
+        Better tomorrow.”
+        ♡
+
+      </div>
+
+
+      <div class="footer-social">
+
+        <span>▶</span>
+        <span>●</span>
+        <span>✈</span>
+        <span>◉</span>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <div>
+        © 2026 AnuZzzteach. All rights reserved.
+      </div>
+
+      <div class="footer-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="posts.html">Posts</a>
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+      </div>
+
+    </div>
 
   </footer>
 
+
+  <!-- SEARCH SCRIPT -->
+
+  <script>
+
+    function searchPosts() {
+
+      const input =
+        document.getElementById("searchInput")
+          .value.toLowerCase();
+
+      const posts =
+        document.querySelectorAll(".post-card");
+
+      posts.forEach(function(post) {
+
+        const text =
+          post.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+
+          post.style.display = "";
+
+        } else {
+
+          post.style.display = "none";
+
+        }
+
+      });
+
+    }
+
+  </script>
 
 </body>
 
