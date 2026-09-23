@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#071426"/>
+      <stop offset="100%" stop-color="#263b68"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <circle cx="1020" cy="100" r="180" fill="#6175ff" opacity="0.16"/>
+  <circle cx="1080" cy="560" r="230" fill="#7188ff" opacity="0.10"/>
+
+  <text x="90" y="210"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="82"
+        font-weight="700"
+        fill="white">
+    AnuZzz<tspan fill="#7188ff">teach</tspan>
+  </text>
+
+  <text x="95" y="285"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="32"
+        fill="#dbe1ff">
+    Learn • Explore • Grow
+  </text>
+
+  <line x1="95" y1="330" x2="360" y2="330"
+        stroke="#6175ff"
+        stroke-width="6"
+        stroke-linecap="round"/>
+
+  <text x="95" y="395"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="25"
+        fill="#c9d1dc">
+    Knowledge • Technology • Guides
+  </text>
+
+  <text x="95" y="445"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="25"
+        fill="#c9d1dc">
+    Discover something new every day.
+  </text>
+
+  <text x="1010" y="360"
+        text-anchor="middle"
+        font-size="150">
+    🎓
+  </text>
+</svg>
