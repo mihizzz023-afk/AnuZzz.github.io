@@ -2,15 +2,15 @@
 <html lang="en">
 
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- SEO -->
-  <title>Posts - AnuZzzteach</title>
+  <title>Posts - AnuZzzteach | Learn, Explore & Grow</title>
 
   <meta
     name="description"
-    content="Explore educational articles, useful knowledge, learning tips and interesting ideas from AnuZzzteach."
+    content="Explore useful educational articles, learning tips, interesting ideas and simple explanations from AnuZzzteach."
   >
 
   <meta name="robots" content="index, follow">
@@ -21,11 +21,10 @@
     href="https://mihizzz023-afk.github.io/AnuZzz.github.io/posts.html"
   >
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Posts - AnuZzzteach">
   <meta
     property="og:description"
-    content="Explore useful articles and learning resources from AnuZzzteach."
+    content="Explore useful articles and learning ideas from AnuZzzteach."
   >
   <meta property="og:type" content="website">
   <meta
@@ -42,30 +41,34 @@
       font-family: Arial, sans-serif;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: #f4f6f8;
       color: #222;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     /* HEADER */
 
     header {
-      background: linear-gradient(135deg, #111, #333);
+      background: linear-gradient(135deg, #0b0b0b, #333);
       color: white;
       text-align: center;
-      padding: 40px 20px;
+      padding: 32px 20px;
     }
 
     header h1 {
-      font-size: 36px;
+      font-size: 38px;
       letter-spacing: 1px;
     }
 
     header p {
       margin-top: 8px;
       color: #ccc;
-      font-size: 16px;
+      font-size: 15px;
     }
 
     /* NAVIGATION */
@@ -75,6 +78,7 @@
       padding: 16px;
       text-align: center;
       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+
       position: sticky;
       top: 0;
       z-index: 100;
@@ -83,24 +87,62 @@
     nav a {
       text-decoration: none;
       color: #222;
-      margin: 0 12px;
+      margin: 0 13px;
       font-weight: bold;
+      font-size: 14px;
       transition: 0.3s;
     }
 
     nav a:hover {
-      color: #666;
+      color: #777;
     }
 
-    /* MAIN CONTAINER */
+    /* PAGE HERO */
+
+    .page-hero {
+      position: relative;
+      min-height: 330px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+      padding: 60px 20px;
+
+      background:
+        linear-gradient(
+          rgba(0,0,0,0.60),
+          rgba(0,0,0,0.70)
+        ),
+        url("https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1600&q=85");
+
+      background-size: cover;
+      background-position: center;
+    }
+
+    .page-hero-content {
+      color: white;
+      max-width: 700px;
+    }
+
+    .page-hero h2 {
+      font-size: 44px;
+      margin-bottom: 12px;
+    }
+
+    .page-hero p {
+      color: #eee;
+      font-size: 17px;
+    }
+
+    /* MAIN */
 
     .container {
-      max-width: 1000px;
-      margin: 50px auto;
+      max-width: 1050px;
+      margin: 60px auto;
       padding: 0 20px;
     }
-
-    /* PAGE TITLE */
 
     .title {
       text-align: center;
@@ -114,7 +156,6 @@
 
     .title p {
       color: #777;
-      font-size: 16px;
     }
 
     /* POSTS GRID */
@@ -122,42 +163,67 @@
     .posts {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 25px;
+      gap: 28px;
     }
 
     /* POST CARD */
 
     .post {
       background: white;
-      padding: 28px;
-      border-radius: 16px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
-      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 17px;
+      overflow: hidden;
+
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+
+      transition:
+        transform 0.3s,
+        box-shadow 0.3s;
     }
 
     .post:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+      transform: translateY(-6px);
+      box-shadow: 0 10px 28px rgba(0,0,0,0.13);
+    }
+
+    /* POST IMAGE */
+
+    .post-image {
+      width: 100%;
+      height: 230px;
+
+      object-fit: cover;
+      display: block;
+    }
+
+    /* POST CONTENT */
+
+    .post-content {
+      padding: 28px;
     }
 
     /* CATEGORY */
 
     .category {
       display: inline-block;
-      background: #eeeeee;
-      color: #333;
-      padding: 5px 10px;
+
+      background: #111;
+      color: white;
+
+      padding: 6px 12px;
       border-radius: 20px;
+
       font-size: 12px;
       font-weight: bold;
+
       margin-bottom: 15px;
     }
 
-    /* POST TITLE */
+    /* TITLE */
 
     .post h3 {
-      font-size: 23px;
-      margin-bottom: 8px;
+      font-size: 24px;
+      margin-bottom: 7px;
+      line-height: 1.3;
     }
 
     /* DATE */
@@ -168,24 +234,31 @@
       margin-bottom: 15px;
     }
 
-    /* POST DESCRIPTION */
+    /* DESCRIPTION */
 
     .post p {
       color: #666;
-      line-height: 1.7;
+      line-height: 1.8;
     }
 
-    /* READ MORE */
+    /* BUTTON */
 
     .read-more {
       display: inline-block;
+
       margin-top: 20px;
-      padding: 10px 18px;
+
+      padding: 11px 20px;
+
       background: #111;
       color: white;
+
       text-decoration: none;
+
       border-radius: 8px;
+
       font-weight: bold;
+
       transition: 0.3s;
     }
 
@@ -197,10 +270,15 @@
 
     footer {
       margin-top: 70px;
-      background: #080808;
+
+      background: #050505;
       color: #888;
+
       text-align: center;
+
       padding: 28px 20px;
+
+      font-size: 14px;
     }
 
     /* MOBILE */
@@ -213,52 +291,113 @@
 
       nav a {
         margin: 0 7px;
-        font-size: 14px;
+        font-size: 13px;
+      }
+
+      .page-hero {
+        min-height: 300px;
+      }
+
+      .page-hero h2 {
+        font-size: 34px;
+      }
+
+      .page-hero p {
+        font-size: 15px;
       }
 
       .posts {
         grid-template-columns: 1fr;
       }
 
-      .title h2 {
-        font-size: 28px;
+      .post-image {
+        height: 200px;
       }
 
-      .post {
-        padding: 24px;
+      .post-content {
+        padding: 23px;
+      }
+
+      .title h2 {
+        font-size: 28px;
       }
 
     }
 
   </style>
+
 </head>
 
+
 <body>
+
 
   <!-- HEADER -->
 
   <header>
+
     <h1>AnuZzzteach</h1>
-    <p>Learn • Explore • Grow</p>
+
+    <p>
+      Learn • Explore • Grow
+    </p>
+
   </header>
 
 
   <!-- NAVIGATION -->
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="posts.html">Posts</a>
-    <a href="about.html">About</a>
+
+    <a href="index.html">
+      Home
+    </a>
+
+    <a href="posts.html">
+      Posts
+    </a>
+
+    <a href="about.html">
+      About
+    </a>
+
   </nav>
+
+
+  <!-- PAGE HERO -->
+
+  <section class="page-hero">
+
+    <div class="page-hero-content">
+
+      <h2>
+        Explore Our Posts
+      </h2>
+
+      <p>
+        Discover useful knowledge, learning tips and interesting ideas.
+      </p>
+
+    </div>
+
+  </section>
 
 
   <!-- MAIN -->
 
   <main class="container">
 
+
     <div class="title">
-      <h2>All Posts</h2>
-      <p>Explore useful knowledge, learning tips and interesting ideas.</p>
+
+      <h2>
+        All Posts
+      </h2>
+
+      <p>
+        Learn something new and explore different ideas.
+      </p>
+
     </div>
 
 
@@ -269,30 +408,40 @@
 
       <article class="post">
 
-        <span class="category">
-          Welcome
-        </span>
+        <img
+          class="post-image"
+          src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=85"
+          alt="Books and learning">
 
-        <h3>
-          My First Post
-        </h3>
+        <div class="post-content">
 
-        <div class="date">
-          Published on September 23, 2026
+          <span class="category">
+            Welcome
+          </span>
+
+          <h3>
+            My First Post
+          </h3>
+
+          <div class="date">
+            Published on September 23, 2026
+          </div>
+
+          <p>
+            Welcome to AnuZzzteach. This is the first blog post
+            on the website. Discover useful knowledge, interesting
+            ideas and more educational content here.
+          </p>
+
+          <a
+            href="posts/my-first-post.html"
+            class="read-more">
+
+            Read More →
+
+          </a>
+
         </div>
-
-        <p>
-          Welcome to AnuZzzteach. This is the first blog post
-          on the website. Discover useful knowledge, interesting
-          ideas and more educational content here.
-        </p>
-
-        <a
-          href="posts/my-first-post.html"
-          class="read-more"
-        >
-          Read More →
-        </a>
 
       </article>
 
@@ -301,29 +450,39 @@
 
       <article class="post">
 
-        <span class="category">
-          Learning
-        </span>
+        <img
+          class="post-image"
+          src="https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=1200&q=85"
+          alt="Student learning and studying">
 
-        <h3>
-          How to Learn Better
-        </h3>
+        <div class="post-content">
 
-        <div class="date">
-          Coming Soon
+          <span class="category">
+            Learning
+          </span>
+
+          <h3>
+            How to Learn Better
+          </h3>
+
+          <div class="date">
+            Published on September 23, 2026
+          </div>
+
+          <p>
+            Simple and practical ideas that can help make
+            learning easier, more effective and more enjoyable.
+          </p>
+
+          <a
+            href="posts/second-post.html"
+            class="read-more">
+
+            Read More →
+
+          </a>
+
         </div>
-
-        <p>
-          Simple and practical ideas that can help make learning
-          easier, more effective and more enjoyable.
-        </p>
-
-        <a
-          href="posts/second-post.html"
-          class="read-more"
-        >
-          Read More →
-        </a>
 
       </article>
 
@@ -336,10 +495,13 @@
   <!-- FOOTER -->
 
   <footer>
+
     <p>
       © 2026 AnuZzzteach. All rights reserved.
     </p>
+
   </footer>
+
 
 </body>
 
