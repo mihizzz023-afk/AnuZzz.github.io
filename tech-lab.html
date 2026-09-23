@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tech Lab | AnuZzzteach</title>
+
+  <meta
+    name="description"
+    content="AnuZzzteach Tech Lab - Free useful online tools for students, creators and tech users."
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7ff;
+      color: #182033;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      background: #10152b;
+      color: white;
+      padding: 18px 6%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+      text-decoration: none;
+      color: white;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: #7183ff;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    nav a {
+      color: #dfe4ff;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      transition: 0.25s;
+    }
+
+    nav a:hover,
+    nav a.active {
+      background: #6175ff;
+      color: white;
+    }
+
+    /* HERO */
+    .hero {
+      background:
+        linear-gradient(
+          135deg,
+          rgba(16,21,43,0.97),
+          rgba(51,65,140,0.92)
+        );
+
+      color: white;
+      padding: 75px 6%;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 7vw, 64px);
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #91a0ff;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      color: #dce1ff;
+      font-size: 17px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 7px 15px;
+      border-radius: 30px;
+      margin-bottom: 20px;
+      font-size: 13px;
+    }
+
+    /* MAIN */
+    main {
+      max-width: 1250px;
+      margin: auto;
+      padding: 50px 6%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 12px;
+      font-size: 34px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: #667085;
+      max-width: 700px;
+      margin: 0 auto 35px;
+    }
+
+    /* SEARCH */
+    .search-box {
+      max-width: 700px;
+      margin: 0 auto 35px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 16px 18px;
+      border: 1px solid #d9def0;
+      border-radius: 14px;
+      font-size: 16px;
+      outline: none;
+      background: white;
+    }
+
+    .search-box input:focus {
+      border-color: #6175ff;
+      box-shadow: 0 0 0 4px rgba(97,117,255,0.12);
+    }
+
+    /* TOOLS GRID */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .tool-card {
+      background: white;
+      border-radius: 18px;
+      padding: 25px;
+      border: 1px solid #e4e8f4;
+      box-shadow: 0 8px 25px rgba(35,45,90,0.07);
+      transition: 0.25s;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 35px rgba(35,45,90,0.12);
+    }
+
+    .tool-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      background: #eef0ff;
+      border-radius: 13px;
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .tool-card h2 {
+      font-size: 21px;
+      margin-bottom: 6px;
+    }
+
+    .tool-card > p {
+      color: #70788b;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .tool-box {
+      background: #f7f8fd;
+      padding: 15px;
+      border-radius: 13px;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid #d8ddec;
+      background: white;
+      border-radius: 9px;
+      padding: 11px 12px;
+      font-size: 14px;
+      outline: none;
+      font-family: inherit;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #6175ff;
+    }
+
+    button {
+      border: none;
+      background: #6175ff;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 9px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #4e62e8;
+      transform: translateY(-1px);
+    }
+
+    button.secondary {
+      background: #e8ebf8;
+      color: #263052;
+    }
+
+    button.secondary:hover {
+      background: #dce1f4;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .result {
+      margin-top: 12px;
+      padding: 12px;
+      background: white;
+      border: 1px solid #e0e4f0;
+      border-radius: 9px;
+      min-height: 42px;
+      font-size: 14px;
+      word-break: break-word;
+    }
+
+    /* CALCULATOR */
+    .calculator-display {
+      width: 100%;
+      font-size: 24px;
+      text-align: right;
+      margin-bottom: 10px;
+      background: #10152b;
+      color: white;
+      border: none;
+    }
+
+    .calculator-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 7px;
+    }
+
+    .calculator-grid button {
+      padding: 13px 5px;
+      font-size: 16px;
+    }
+
+    .calculator-grid .operator {
+      background: #303b73;
+    }
+
+    .calculator-grid .clear {
+      background: #dc5261;
+    }
+
+    /* COUNTER */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .stat {
+      background: white;
+      padding: 10px 5px;
+      border-radius: 9px;
+      text-align: center;
+      border: 1px solid #e1e5ef;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 18px;
+    }
+
+    .stat small {
+      color: #7b8190;
+    }
+
+    /* COLOR */
+    .color-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    #colorPicker {
+      width: 60px;
+      height: 45px;
+      padding: 3px;
+      cursor: pointer;
+    }
+
+    .color-preview {
+      height: 80px;
+      border-radius: 12px;
+      margin-top: 12px;
+      border: 1px solid #ddd;
+    }
+
+    /* BASE */
+    .base-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    /* UNIT */
+    .unit-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    /* STOPWATCH */
+    .timer-display {
+      text-align: center;
+      font-size: 42px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      margin: 10px 0 15px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #10152b;
+      color: #cdd3f1;
+      text-align: center;
+      padding: 30px 6%;
+      margin-top: 30px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 850px) {
+      .nav {
+        flex-direction: column;
+      }
+
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      header {
+        padding: 15px 4%;
+      }
+
+      nav a {
+        font-size: 12px;
+        padding: 7px 8px;
+      }
+
+      main {
+        padding: 40px 4%;
+      }
+
+      .hero {
+        padding: 60px 5%;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .base-grid,
+      .unit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tool-card {
+        padding: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+
+    <a href="index.html" class="logo">
+      AnuZzz<span>teach</span>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="posts.html">Posts</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="tech-lab.html" class="active">Tech Lab</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-badge">
+      🧪 AnuZzzteach • Tech Lab
+    </div>
+
+    <h1>
+      Welcome to <span>Tech Lab</span>
+    </h1>
+
+    <p>
+      Useful mini tools for students, creators and everyday tech users.
+      Everything runs directly in your browser.
+    </p>
+
+  </div>
+
+</section>
+
+
+<main>
+
+  <h2 class="section-title">Useful Tools</h2>
+
+  <p class="section-subtitle">
+    Explore simple browser-based tools made for everyday tasks.
+  </p>
+
+
+  <!-- SEARCH -->
+
+  <div class="search-box">
+    <input
+      type="search"
+      id="toolSearch"
+      placeholder="🔎 Search tools..."
+      oninput="searchTools()"
+    >
+  </div>
+
+
+  <div class="tools-grid">
+
+
+    <!-- CALCULATOR -->
+
+    <div class="tool-card" data-name="calculator math calculation">
+
+      <div class="tool-icon">🧮</div>
+
+      <h2>Calculator</h2>
+
+      <p>Quickly perform basic mathematical calculations.</p>
+
+      <div class="tool-box">
+
+        <input
+          id="calcDisplay"
+          class="calculator-display"
+          type="text"
+          readonly
+          value="0"
+        >
+
+        <div class="calculator-grid">
+
+          <button class="clear" onclick="calcClear()">C</button>
+          <button class="operator" onclick="calcInput('/')">÷</button>
+          <button class="operator" onclick="calcInput('*')">×</button>
+          <button class="operator" onclick="calcBackspace()">⌫</button>
+
+          <button onclick="calcInput('7')">7</button>
+          <button onclick="calcInput('8')">8</button>
+          <button onclick="calcInput('9')">9</button>
+          <button class="operator" onclick="calcInput('-')">−</button>
+
+          <button onclick="calcInput('4')">4</button>
+          <button onclick="calcInput('5')">5</button>
+          <button onclick="calcInput('6')">6</button>
+          <button class="operator" onclick="calcInput('+')">+</button>
+
+          <button onclick="calcInput('1')">1</button>
+          <button onclick="calcInput('2')">2</button>
+          <button onclick="calcInput('3')">3</button>
+          <button onclick="calcInput('.')">.</button>
+
+          <button onclick="calcInput('0')">0</button>
+          <button onclick="calcInput('00')">00</button>
+          <button onclick="calcPercent()">%</button>
+          <button onclick="calcResult()">=</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- WORD COUNTER -->
+
+    <div class="tool-card" data-name="word character counter text">
+
+      <div class="tool-icon">📝</div>
+
+      <h2>Word & Character Counter</h2>
+
+      <p>Count words, characters, sentences and estimated reading time.</p>
+
+      <div class="tool-box">
+
+        <textarea
+          id="counterText"
+          placeholder="Type or paste your text here..."
+          oninput="updateCounter()"
+        ></textarea>
+
+        <div class="stats">
+
+          <div class="stat">
+            <strong id="wordCount">0</strong>
+            <small>Words</small>
+          </div>
+
+          <div class="stat">
+            <strong id="charCount">0</strong>
+            <small>Characters</small>
+          </div>
+
+          <div class="stat">
+            <strong id="sentenceCount">0</strong>
+            <small>Sentences</small>
+          </div>
+
+          <div class="stat">
+            <strong id="readingTime">0 min</strong>
+            <small>Reading</small>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- TEXT CASE -->
+
+    <div class="tool-card" data-name="text case converter uppercase lowercase title">
+
+      <div class="tool-icon">🔤</div>
+
+      <h2>Text Case Converter</h2>
+
+      <p>Convert text into different letter cases.</p>
+
+      <div class="tool-box">
+
+        <textarea
+          id="caseText"
+          placeholder="Enter your text..."
+        ></textarea>
+
+        <div class="button-row">
+
+          <button onclick="changeCase('upper')">
+            UPPERCASE
+          </button>
+
+          <button onclick="changeCase('lower')">
+            lowercase
+          </button>
+
+          <button onclick="changeCase('title')">
+            Title Case
+          </button>
+
+          <button class="secondary" onclick="changeCase('sentence')">
+            Sentence case
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PASSWORD STRENGTH -->
+
+    <div class="tool-card" data-name="password strength security checker">
+
+      <div class="tool-icon">🔐</div>
+
+      <h2>Password Strength Checker</h2>
+
+      <p>
+        Check basic password characteristics locally in your browser.
+      </p>
+
+      <div class="tool-box">
+
+        <input
+          id="passwordInput"
+          type="password"
+          placeholder="Enter a password"
+          oninput="checkPassword()"
+        >
+
+        <div class="result" id="passwordResult">
+          Start typing to check.
+        </div>
+
+        <p style="font-size:12px;color:#777;margin-top:8px;">
+          🔒 This tool does not save or send your password.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- URL TOOL -->
+
+    <div class="tool-card" data-name="url encoder decoder encode decode">
+
+      <div class="tool-icon">🔗</div>
+
+      <h2>URL Encoder / Decoder</h2>
+
+      <p>Encode or decode text for use inside URLs.</p>
+
+      <div class="tool-box">
+
+        <textarea
+          id="urlText"
+          placeholder="Enter URL or text..."
+        ></textarea>
+
+        <div class="button-row">
+
+          <button onclick="encodeURL()">
+            Encode
+          </button>
+
+          <button onclick="decodeURL()">
+            Decode
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- COLOR -->
+
+    <div class="tool-card" data-name="color picker hex rgb color converter">
+
+      <div class="tool-icon">🎨</div>
+
+      <h2>Color Picker</h2>
+
+      <p>Pick a color and get its HEX and RGB values.</p>
+
+      <div class="tool-box">
+
+        <div class="color-row">
+
+          <input
+            type="color"
+            id="colorPicker"
+            value="#6175ff"
+            oninput="updateColor()"
+          >
+
+          <input
+            id="hexColor"
+            value="#6175FF"
+            oninput="hexToColor()"
+          >
+
+        </div>
+
+        <div
+          id="colorPreview"
+          class="color-preview"
+          style="background:#6175ff;"
+        ></div>
+
+        <div class="result" id="rgbResult">
+          RGB: 97, 117, 255
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- UNIT CONVERTER -->
+
+    <div class="tool-card" data-name="unit converter length cm meter kilometer inch feet">
+
+      <div class="tool-icon">📏</div>
+
+      <h2>Length Converter</h2>
+
+      <p>Convert between common length units.</p>
+
+      <div class="tool-box">
+
+        <div class="unit-grid">
+
+          <input
+            type="number"
+            id="unitValue"
+            placeholder="Value"
+            oninput="convertLength()"
+          >
+
+          <select id="unitFrom" onchange="convertLength()">
+
+            <option value="cm">Centimeter</option>
+            <option value="m">Meter</option>
+            <option value="km">Kilometer</option>
+            <option value="in">Inch</option>
+            <option value="ft">Feet</option>
+
+          </select>
+
+          <select id="unitTo" onchange="convertLength()">
+
+            <option value="m">Meter</option>
+            <option value="cm">Centimeter</option>
+            <option value="km">Kilometer</option>
+            <option value="in">Inch</option>
+            <option value="ft">Feet</option>
+
+          </select>
+
+        </div>
+
+        <div class="result" id="unitResult">
+          Enter a value to convert.
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- JSON FORMATTER -->
+
+    <div class="tool-card" data-name="json formatter json beautifier developer">
+
+      <div class="tool-icon">{ }</div>
+
+      <h2>JSON Formatter</h2>
+
+      <p>Format or minify JSON data directly in your browser.</p>
+
+      <div class="tool-box">
+
+        <textarea
+          id="jsonText"
+          placeholder='Example: {"name":"AnuZzz","site":"Tech"}'
+        ></textarea>
+
+        <div class="button-row">
+
+          <button onclick="formatJSON()">
+            Format
+          </button>
+
+          <button class="secondary" onclick="minifyJSON()">
+            Minify
+          </button>
+
+        </div>
+
+        <div class="result" id="jsonResult"></div>
+
+      </div>
+
+    </div>
+
+
+    <!-- NUMBER BASE -->
+
+    <div class="tool-card" data-name="number base converter binary decimal hexadecimal octal">
+
+      <div class="tool-icon">🔢</div>
+
+      <h2>Number Base Converter</h2>
+
+      <p>Convert numbers between decimal, binary, hexadecimal and octal.</p>
+
+      <div class="tool-box">
+
+        <input
+          id="baseInput"
+          type="text"
+          placeholder="Enter decimal number..."
+          oninput="convertBase()"
+        >
+
+        <div class="result" id="baseResult">
+          Enter a decimal number.
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- STOPWATCH -->
+
+    <div class="tool-card" data-name="stopwatch timer time">
+
+      <div class="tool-icon">⏱️</div>
+
+      <h2>Stopwatch</h2>
+
+      <p>A simple browser stopwatch.</p>
+
+      <div class="tool-box">
+
+        <div class="timer-display" id="timerDisplay">
+          00:00:00
+        </div>
+
+        <div class="button-row">
+
+          <button onclick="startStopwatch()">
+            Start
+          </button>
+
+          <button class="secondary" onclick="pauseStopwatch()">
+            Pause
+          </button>
+
+          <button class="secondary" onclick="resetStopwatch()">
+            Reset
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</main>
+
+
+<footer>
+
+  <p>
+    © 2026 <strong>AnuZzzteach</strong>
+  </p>
+
+  <p>
+    Learn • Explore • Grow
+  </p>
+
+</footer>
+
+
+<script>
+
+  /* =========================
+     TOOL SEARCH
+  ========================= */
+
+  function searchTools() {
+
+    const query =
+      document
+        .getElementById("toolSearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+    const cards =
+      document.querySelectorAll(".tool-card");
+
+    cards.forEach(card => {
+
+      const name =
+        card.dataset.name.toLowerCase();
+
+      card.style.display =
+        name.includes(query)
+          ? ""
+          : "none";
+
+    });
+
+  }
+
+
+  /* =========================
+     CALCULATOR
+  ========================= */
+
+  let calcExpression = "";
+
+  function calcInput(value) {
+
+    if (calcExpression === "Error") {
+      calcExpression = "";
+    }
+
+    calcExpression += value;
+
+    document.getElementById("calcDisplay").value =
+      calcExpression || "0";
+  }
+
+
+  function calcClear() {
+
+    calcExpression = "";
+
+    document.getElementById("calcDisplay").value = "0";
+  }
+
+
+  function calcBackspace() {
+
+    calcExpression =
+      calcExpression.slice(0, -1);
+
+    document.getElementById("calcDisplay").value =
+      calcExpression || "0";
+  }
+
+
+  function calcPercent() {
+
+    if (!calcExpression) return;
+
+    try {
+
+      const value =
+        Function(
+          '"use strict"; return (' +
+          calcExpression +
+          ')'
+        )();
+
+      calcExpression =
+        String(value / 100);
+
+      document.getElementById("calcDisplay").value =
+        calcExpression;
+
+    } catch {
+
+      calcExpression = "Error";
+
+      document.getElementById("calcDisplay").value =
+        "Error";
+
+    }
+
+  }
+
+
+  function calcResult() {
+
+    if (!calcExpression) return;
+
+    try {
+
+      if (!/^[0-9+\-*/().\s]+$/.test(calcExpression)) {
+        throw new Error();
+      }
+
+      const result =
+        Function(
+          '"use strict"; return (' +
+          calcExpression +
+          ')'
+        )();
+
+      if (!Number.isFinite(result)) {
+        throw new Error();
+      }
+
+      calcExpression =
+        String(result);
+
+      document.getElementById("calcDisplay").value =
+        calcExpression;
+
+    } catch {
+
+      calcExpression = "Error";
+
+      document.getElementById("calcDisplay").value =
+        "Error";
+
+    }
+
+  }
+
+
+  /* =========================
+     WORD COUNTER
+  ========================= */
+
+  function updateCounter() {
+
+    const text =
+      document.getElementById("counterText").value;
+
+    const words =
+      text.trim()
+        ? text.trim().split(/\s+/).length
+        : 0;
+
+    const characters =
+      text.length;
+
+    const sentences =
+      text.trim()
+        ? (text.match(/[.!?]+/g) || []).length
+        : 0;
+
+    const minutes =
+      words === 0
+        ? 0
+        : Math.max(1, Math.ceil(words / 200));
+
+    document.getElementById("wordCount").textContent =
+      words;
+
+    document.getElementById("charCount").textContent =
+      characters;
+
+    document.getElementById("sentenceCount").textContent =
+      sentences;
+
+    document.getElementById("readingTime").textContent =
+      minutes + " min";
+
+  }
+
+
+  /* =========================
+     TEXT CASE
+  ========================= */
+
+  function changeCase(type) {
+
+    const textarea =
+      document.getElementById("caseText");
+
+    let text = textarea.value;
+
+    if (type === "upper") {
+
+      text = text.toUpperCase();
+
+    }
+
+    else if (type === "lower") {
+
+      text = text.toLowerCase();
+
+    }
+
+    else if (type === "title") {
+
+      text =
+        text.toLowerCase()
+          .replace(/\b\w/g, letter =>
+            letter.toUpperCase()
+          );
+
+    }
+
+    else if (type === "sentence") {
+
+      text =
+        text.toLowerCase()
+          .replace(
+            /(^\s*\w|[.!?]\s+\w)/g,
+            match => match.toUpperCase()
+          );
+
+    }
+
+    textarea.value = text;
+
+  }
+
+
+  /* =========================
+     PASSWORD STRENGTH
+  ========================= */
+
+  function checkPassword() {
+
+    const password =
+      document.getElementById("passwordInput").value;
+
+    const result =
+      document.getElementById("passwordResult");
+
+    if (!password) {
+
+      result.textContent =
+        "Start typing to check.";
+
+      return;
+
+    }
+
+    let score = 0;
+
+    if (password.length >= 8)
+      score++;
+
+    if (password.length >= 12)
+      score++;
+
+    if (/[A-Z]/.test(password))
+      score++;
+
+    if (/[a-z]/.test(password))
+      score++;
+
+    if (/[0-9]/.test(password))
+      score++;
+
+    if (/[^A-Za-z0-9]/.test(password))
+      score++;
+
+    if (score <= 2) {
+
+      result.textContent =
+        "🔴 Basic — consider making it longer and more varied.";
+
+    }
+
+    else if (score <= 4) {
+
+      result.textContent =
+        "🟡 Moderate — adding length and variety can improve it.";
+
+    }
+
+    else {
+
+      result.textContent =
+        "🟢 Strong characteristics detected.";
+
+    }
+
+  }
+
+
+  /* =========================
+     URL ENCODER
+  ========================= */
+
+  function encodeURL() {
+
+    const textarea =
+      document.getElementById("urlText");
+
+    textarea.value =
+      encodeURIComponent(textarea.value);
+
+  }
+
+
+  function decodeURL() {
+
+    const textarea =
+      document.getElementById("urlText");
+
+    try {
+
+      textarea.value =
+        decodeURIComponent(textarea.value);
+
+    } catch {
+
+      alert("Invalid encoded URL/text.");
+
+    }
+
+  }
+
+
+  /* =========================
+     COLOR TOOL
+  ========================= */
+
+  function updateColor() {
+
+    const picker =
+      document.getElementById("colorPicker");
+
+    const hex =
+      picker.value.toUpperCase();
+
+    document.getElementById("hexColor").value =
+      hex;
+
+    document.getElementById("colorPreview").style.background =
+      hex;
+
+    const r =
+      parseInt(hex.slice(1,3),16);
+
+    const g =
+      parseInt(hex.slice(3,5),16);
+
+    const b =
+      parseInt(hex.slice(5,7),16);
+
+    document.getElementById("rgbResult").textContent =
+      `RGB: ${r}, ${g}, ${b}`;
+
+  }
+
+
+  function hexToColor() {
+
+    let hex =
+      document.getElementById("hexColor").value.trim();
+
+    if (!/^#[0-9A-Fa-f]{6}$/.test(hex)) {
+      return;
+    }
+
+    hex = hex.toUpperCase();
+
+    document.getElementById("colorPicker").value =
+      hex;
+
+    document.getElementById("colorPreview").style.background =
+      hex;
+
+    const r =
+      parseInt(hex.slice(1,3),16);
+
+    const g =
+      parseInt(hex.slice(3,5),16);
+
+    const b =
+      parseInt(hex.slice(5,7),16);
+
+    document.getElementById("rgbResult").textContent =
+      `RGB: ${r}, ${g}, ${b}`;
+
+  }
+
+
+  /* =========================
+     LENGTH CONVERTER
+  ========================= */
+
+  const lengthUnits = {
+
+    cm: 0.01,
+    m: 1,
+    km: 1000,
+    in: 0.0254,
+    ft: 0.3048
+
+  };
+
+
+  function convertLength() {
+
+    const value =
+      parseFloat(
+        document.getElementById("unitValue").value
+      );
+
+    const from =
+      document.getElementById("unitFrom").value;
+
+    const to =
+      document.getElementById("unitTo").value;
+
+    const result =
+      document.getElementById("unitResult");
+
+    if (Number.isNaN(value)) {
+
+      result.textContent =
+        "Enter a value to convert.";
+
+      return;
+
+    }
+
+    const meters =
+      value * lengthUnits[from];
+
+    const converted =
+      meters / lengthUnits[to];
+
+    result.textContent =
+      `${value} ${from} = ${converted} ${to}`;
+
+  }
+
+
+  /* =========================
+     JSON FORMATTER
+  ========================= */
+
+  function formatJSON() {
+
+    const text =
+      document.getElementById("jsonText").value;
+
+    const result =
+      document.getElementById("jsonResult");
+
+    try {
+
+      const parsed =
+        JSON.parse(text);
+
+      result.textContent =
+        JSON.stringify(parsed, null, 2);
+
+    } catch {
+
+      result.textContent =
+        "❌ Invalid JSON.";
+
+    }
+
+  }
+
+
+  function minifyJSON() {
+
+    const text =
+      document.getElementById("jsonText").value;
+
+    const result =
+      document.getElementById("jsonResult");
+
+    try {
+
+      const parsed =
+        JSON.parse(text);
+
+      result.textContent =
+        JSON.stringify(parsed);
+
+    } catch {
+
+      result.textContent =
+        "❌ Invalid JSON.";
+
+    }
+
+  }
+
+
+  /* =========================
+     NUMBER BASE CONVERTER
+  ========================= */
+
+  function convertBase() {
+
+    const input =
+      document.getElementById("baseInput").value.trim();
+
+    const result =
+      document.getElementById("baseResult");
+
+    if (!input) {
+
+      result.textContent =
+        "Enter a decimal number.";
+
+      return;
+
+    }
+
+    const number =
+      Number(input);
+
+    if (!Number.isInteger(number)) {
+
+      result.textContent =
+        "Please enter a whole decimal number.";
+
+      return;
+
+    }
+
+    if (!Number.isSafeInteger(number)) {
+
+      result.textContent =
+        "Number is too large.";
+
+      return;
+
+    }
+
+    result.innerHTML = `
+      <strong>Binary:</strong> ${number.toString(2)}<br>
+      <strong>Octal:</strong> ${number.toString(8)}<br>
+      <strong>Decimal:</strong> ${number}<br>
+      <strong>Hex:</strong> ${number.toString(16).toUpperCase()}
+    `;
+
+  }
+
+
+  /* =========================
+     STOPWATCH
+  ========================= */
+
+  let stopwatchSeconds = 0;
+  let stopwatchInterval = null;
+
+
+  function updateStopwatch() {
+
+    const hours =
+      Math.floor(stopwatchSeconds / 3600);
+
+    const minutes =
+      Math.floor((stopwatchSeconds % 3600) / 60);
+
+    const seconds =
+      stopwatchSeconds % 60;
+
+    document.getElementById("timerDisplay").textContent =
+      String(hours).padStart(2,"0") +
+      ":" +
+      String(minutes).padStart(2,"0") +
+      ":" +
+      String(seconds).padStart(2,"0");
+
+  }
+
+
+  function startStopwatch() {
+
+    if (stopwatchInterval !== null) {
+      return;
+    }
+
+    stopwatchInterval =
+      setInterval(() => {
+
+        stopwatchSeconds++;
+
+        updateStopwatch();
+
+      }, 1000);
+
+  }
+
+
+  function pauseStopwatch() {
+
+    clearInterval(stopwatchInterval);
+
+    stopwatchInterval = null;
+
+  }
+
+
+  function resetStopwatch() {
+
+    clearInterval(stopwatchInterval);
+
+    stopwatchInterval = null;
+
+    stopwatchSeconds = 0;
+
+    updateStopwatch();
+
+  }
+
+
+</script>
+
+</body>
+</html>
