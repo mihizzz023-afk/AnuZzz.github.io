@@ -21,18 +21,33 @@
     href="https://mihizzz023-afk.github.io/AnuZzz.github.io/posts.html"
   >
 
-  <meta property="og:title" content="Posts - AnuZzzteach">
+  <!-- Open Graph -->
+
+  <meta
+    property="og:title"
+    content="Posts - AnuZzzteach"
+  >
+
   <meta
     property="og:description"
     content="Explore useful articles and learning ideas from AnuZzzteach."
   >
-  <meta property="og:type" content="website">
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
   <meta
     property="og:url"
     content="https://mihizzz023-afk.github.io/AnuZzz.github.io/posts.html"
   >
 
   <style>
+
+    /* =========================
+       RESET
+    ========================= */
 
     * {
       margin: 0;
@@ -49,15 +64,29 @@
       background: #f4f6f8;
       color: #222;
       line-height: 1.7;
+
+      transition:
+        background 0.3s ease,
+        color 0.3s ease;
     }
 
-    /* HEADER */
+
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
-      background: linear-gradient(135deg, #0b0b0b, #333);
+      background: linear-gradient(
+        135deg,
+        #0b0b0b,
+        #333
+      );
+
       color: white;
       text-align: center;
       padding: 32px 20px;
+
+      position: relative;
     }
 
     header h1 {
@@ -71,43 +100,108 @@
       font-size: 15px;
     }
 
-    /* NAVIGATION */
 
-    nav {
-      background: white;
-      padding: 16px;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    /* =========================
+       DARK MODE BUTTON
+    ========================= */
 
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+    .theme-toggle {
+      position: absolute;
 
-    nav a {
-      text-decoration: none;
-      color: #222;
-      margin: 0 13px;
-      font-weight: bold;
-      font-size: 14px;
-      transition: 0.3s;
-    }
+      right: 25px;
+      top: 50%;
+      transform: translateY(-50%);
 
-    nav a:hover {
-      color: #777;
-    }
+      width: 44px;
+      height: 44px;
 
-    /* PAGE HERO */
+      border: none;
+      border-radius: 12px;
 
-    .page-hero {
-      position: relative;
-      min-height: 330px;
+      background: #263950;
+      color: white;
+
+      font-size: 20px;
+
+      cursor: pointer;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
+      transition: 0.25s;
+    }
+
+    .theme-toggle:hover {
+      background: #405675;
+      transform:
+        translateY(-50%)
+        translateY(-2px);
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+      background: white;
+
+      padding: 16px;
+
       text-align: center;
+
+      box-shadow:
+        0 2px 10px rgba(0,0,0,0.08);
+
+      position: sticky;
+      top: 0;
+
+      z-index: 100;
+
+      transition:
+        background 0.3s,
+        box-shadow 0.3s;
+    }
+
+    nav a {
+      text-decoration: none;
+
+      color: #222;
+
+      margin: 0 13px;
+
+      font-weight: bold;
+      font-size: 14px;
+
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #6678ff;
+    }
+
+    nav a.active {
+      color: #5268e8;
+    }
+
+
+    /* =========================
+       PAGE HERO
+    ========================= */
+
+    .page-hero {
+      position: relative;
+
+      min-height: 330px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      text-align: center;
+
       padding: 60px 20px;
 
       background:
@@ -136,21 +230,28 @@
       font-size: 17px;
     }
 
-    /* MAIN */
+
+    /* =========================
+       MAIN
+    ========================= */
 
     .container {
       max-width: 1050px;
+
       margin: 60px auto;
+
       padding: 0 20px;
     }
 
     .title {
       text-align: center;
+
       margin-bottom: 40px;
     }
 
     .title h2 {
       font-size: 32px;
+
       margin-bottom: 10px;
     }
 
@@ -158,90 +259,136 @@
       color: #777;
     }
 
-    /* POSTS GRID */
+
+    /* =========================
+       POSTS GRID
+    ========================= */
 
     .posts {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
       gap: 28px;
     }
 
-    /* POST CARD */
+
+    /* =========================
+       POST CARD
+    ========================= */
 
     .post {
       background: white;
+
       border-radius: 17px;
+
       overflow: hidden;
 
-      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+      box-shadow:
+        0 5px 18px rgba(0,0,0,0.08);
 
       transition:
         transform 0.3s,
-        box-shadow 0.3s;
+        box-shadow 0.3s,
+        background 0.3s;
     }
 
     .post:hover {
       transform: translateY(-6px);
-      box-shadow: 0 10px 28px rgba(0,0,0,0.13);
+
+      box-shadow:
+        0 10px 28px rgba(0,0,0,0.13);
     }
 
-    /* POST IMAGE */
+
+    /* =========================
+       POST IMAGE
+    ========================= */
 
     .post-image {
       width: 100%;
+
       height: 230px;
 
       object-fit: cover;
+
       display: block;
     }
 
-    /* POST CONTENT */
+
+    /* =========================
+       POST CONTENT
+    ========================= */
 
     .post-content {
       padding: 28px;
     }
 
-    /* CATEGORY */
+
+    /* =========================
+       CATEGORY
+    ========================= */
 
     .category {
       display: inline-block;
 
       background: #111;
+
       color: white;
 
       padding: 6px 12px;
+
       border-radius: 20px;
 
       font-size: 12px;
+
       font-weight: bold;
 
       margin-bottom: 15px;
     }
 
-    /* TITLE */
+
+    /* =========================
+       TITLE
+    ========================= */
 
     .post h3 {
       font-size: 24px;
+
       margin-bottom: 7px;
+
       line-height: 1.3;
     }
 
-    /* DATE */
+
+    /* =========================
+       DATE
+    ========================= */
 
     .date {
       color: #999;
+
       font-size: 13px;
+
       margin-bottom: 15px;
     }
 
-    /* DESCRIPTION */
+
+    /* =========================
+       DESCRIPTION
+    ========================= */
 
     .post p {
       color: #666;
+
       line-height: 1.8;
     }
 
-    /* BUTTON */
+
+    /* =========================
+       BUTTON
+    ========================= */
 
     .read-more {
       display: inline-block;
@@ -251,6 +398,7 @@
       padding: 11px 20px;
 
       background: #111;
+
       color: white;
 
       text-decoration: none;
@@ -266,12 +414,16 @@
       background: #333;
     }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       margin-top: 70px;
 
       background: #050505;
+
       color: #888;
 
       text-align: center;
@@ -281,45 +433,178 @@
       font-size: 14px;
     }
 
-    /* MOBILE */
+
+    /* =========================
+       DARK MODE
+    ========================= */
+
+    body.dark-mode {
+      background: #0e141d;
+      color: #e8edf5;
+    }
+
+
+    body.dark-mode nav {
+      background: #151e2b;
+
+      box-shadow:
+        0 2px 12px rgba(0,0,0,0.30);
+    }
+
+
+    body.dark-mode nav a {
+      color: #d5dbe5;
+    }
+
+
+    body.dark-mode nav a:hover {
+      color: #8d9cff;
+    }
+
+
+    body.dark-mode nav a.active {
+      color: #9aa7ff;
+    }
+
+
+    body.dark-mode .title h2 {
+      color: #f1f4f8;
+    }
+
+
+    body.dark-mode .title p {
+      color: #aeb8c7;
+    }
+
+
+    body.dark-mode .post {
+      background: #182230;
+
+      box-shadow:
+        0 5px 20px rgba(0,0,0,0.30);
+    }
+
+
+    body.dark-mode .post:hover {
+      box-shadow:
+        0 10px 30px rgba(0,0,0,0.40);
+    }
+
+
+    body.dark-mode .post h3 {
+      color: #f1f4f8;
+    }
+
+
+    body.dark-mode .post p {
+      color: #aeb8c7;
+    }
+
+
+    body.dark-mode .date {
+      color: #8f9bad;
+    }
+
+
+    body.dark-mode .category {
+      background: #303b68;
+      color: #dce1ff;
+    }
+
+
+    body.dark-mode .read-more {
+      background: #6175ff;
+    }
+
+
+    body.dark-mode .read-more:hover {
+      background: #7183ff;
+    }
+
+
+    body.dark-mode .theme-toggle {
+      background: #354b68;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 700px) {
+
+      header {
+        padding: 27px 65px 27px 20px;
+      }
+
 
       header h1 {
         font-size: 30px;
       }
 
+
+      header p {
+        font-size: 14px;
+      }
+
+
+      .theme-toggle {
+        right: 18px;
+
+        width: 42px;
+        height: 42px;
+      }
+
+
+      nav {
+        padding: 14px 8px;
+      }
+
+
       nav a {
         margin: 0 7px;
+
         font-size: 13px;
       }
+
 
       .page-hero {
         min-height: 300px;
       }
 
+
       .page-hero h2 {
         font-size: 34px;
       }
+
 
       .page-hero p {
         font-size: 15px;
       }
 
+
       .posts {
         grid-template-columns: 1fr;
       }
+
 
       .post-image {
         height: 200px;
       }
 
+
       .post-content {
         padding: 23px;
       }
 
+
       .title h2 {
         font-size: 28px;
+      }
+
+
+      .container {
+        margin: 45px auto;
       }
 
     }
@@ -332,20 +617,39 @@
 <body>
 
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header>
 
-    <h1>AnuZzzteach</h1>
+    <h1>
+      AnuZzzteach
+    </h1>
 
     <p>
       Learn • Explore • Grow
     </p>
 
+
+    <!-- DARK MODE BUTTON -->
+
+    <button
+      class="theme-toggle"
+      id="themeToggle"
+      onclick="toggleDarkMode()"
+      aria-label="Toggle dark mode">
+
+      🌙
+
+    </button>
+
   </header>
 
 
-  <!-- NAVIGATION -->
+  <!-- =========================
+       NAVIGATION
+  ========================= -->
 
   <nav>
 
@@ -353,18 +657,28 @@
       Home
     </a>
 
-    <a href="posts.html">
+    <a
+      href="posts.html"
+      class="active">
+
       Posts
+
     </a>
 
     <a href="about.html">
       About
     </a>
 
+    <a href="contact.html">
+      Contact
+    </a>
+
   </nav>
 
 
-  <!-- PAGE HERO -->
+  <!-- =========================
+       PAGE HERO
+  ========================= -->
 
   <section class="page-hero">
 
@@ -383,7 +697,9 @@
   </section>
 
 
-  <!-- MAIN -->
+  <!-- =========================
+       MAIN
+  ========================= -->
 
   <main class="container">
 
@@ -404,7 +720,9 @@
     <div class="posts">
 
 
-      <!-- POST 1 -->
+      <!-- =========================
+           POST 1
+      ========================= -->
 
       <article class="post">
 
@@ -413,25 +731,30 @@
           src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=85"
           alt="Books and learning">
 
+
         <div class="post-content">
 
           <span class="category">
             Welcome
           </span>
 
+
           <h3>
             My First Post
           </h3>
 
+
           <div class="date">
             Published on September 23, 2026
           </div>
+
 
           <p>
             Welcome to AnuZzzteach. This is the first blog post
             on the website. Discover useful knowledge, interesting
             ideas and more educational content here.
           </p>
+
 
           <a
             href="posts/my-first-post.html"
@@ -446,7 +769,9 @@
       </article>
 
 
-      <!-- POST 2 -->
+      <!-- =========================
+           POST 2
+      ========================= -->
 
       <article class="post">
 
@@ -455,24 +780,29 @@
           src="https://images.unsplash.com/photo-1453738773917-9c3eff1db985?auto=format&fit=crop&w=1200&q=85"
           alt="Student learning and studying">
 
+
         <div class="post-content">
 
           <span class="category">
             Learning
           </span>
 
+
           <h3>
             How to Learn Better
           </h3>
+
 
           <div class="date">
             Published on September 23, 2026
           </div>
 
+
           <p>
             Simple and practical ideas that can help make
             learning easier, more effective and more enjoyable.
           </p>
+
 
           <a
             href="posts/second-post.html"
@@ -492,7 +822,9 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
   <footer>
 
@@ -501,6 +833,94 @@
     </p>
 
   </footer>
+
+
+  <!-- =========================
+       DARK MODE SCRIPT
+  ========================= -->
+
+  <script>
+
+    function toggleDarkMode() {
+
+      document.body.classList.toggle(
+        "dark-mode"
+      );
+
+
+      const button =
+        document.getElementById(
+          "themeToggle"
+        );
+
+
+      if (
+        document.body.classList.contains(
+          "dark-mode"
+        )
+      ) {
+
+        button.textContent = "☀️";
+
+        localStorage.setItem(
+          "theme",
+          "dark"
+        );
+
+      } else {
+
+        button.textContent = "🌙";
+
+        localStorage.setItem(
+          "theme",
+          "light"
+        );
+
+      }
+
+    }
+
+
+    /* =========================
+       LOAD SAVED THEME
+    ========================= */
+
+    window.addEventListener(
+      "load",
+      function() {
+
+        const savedTheme =
+          localStorage.getItem(
+            "theme"
+          );
+
+
+        const button =
+          document.getElementById(
+            "themeToggle"
+          );
+
+
+        if (
+          savedTheme === "dark"
+        ) {
+
+          document.body.classList.add(
+            "dark-mode"
+          );
+
+          button.textContent = "☀️";
+
+        } else {
+
+          button.textContent = "🌙";
+
+        }
+
+      }
+    );
+
+  </script>
 
 
 </body>
