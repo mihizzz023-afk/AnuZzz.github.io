@@ -5,9 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- SEO -->
   <title>Posts - AnuZzzteach</title>
 
+  <meta
+    name="description"
+    content="Explore educational articles, useful knowledge, learning tips and interesting ideas from AnuZzzteach."
+  >
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="AnuZzzteach">
+
+  <link
+    rel="canonical"
+    href="https://mihizzz023-afk.github.io/AnuZzz.github.io/posts.html"
+  >
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Posts - AnuZzzteach">
+  <meta
+    property="og:description"
+    content="Explore useful articles and learning resources from AnuZzzteach."
+  >
+  <meta property="og:type" content="website">
+  <meta
+    property="og:url"
+    content="https://mihizzz023-afk.github.io/AnuZzz.github.io/posts.html"
+  >
+
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -18,29 +45,39 @@
     body {
       background: #f4f6f8;
       color: #222;
+      line-height: 1.6;
     }
+
+    /* HEADER */
 
     header {
       background: linear-gradient(135deg, #111, #333);
       color: white;
       text-align: center;
-      padding: 35px 20px;
+      padding: 40px 20px;
     }
 
     header h1 {
-      font-size: 34px;
+      font-size: 36px;
+      letter-spacing: 1px;
     }
 
     header p {
       margin-top: 8px;
       color: #ccc;
+      font-size: 16px;
     }
+
+    /* NAVIGATION */
 
     nav {
       background: white;
       padding: 16px;
       text-align: center;
       box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     nav a {
@@ -48,72 +85,165 @@
       color: #222;
       margin: 0 12px;
       font-weight: bold;
+      transition: 0.3s;
     }
 
+    nav a:hover {
+      color: #666;
+    }
+
+    /* MAIN CONTAINER */
+
     .container {
-      max-width: 900px;
-      margin: 45px auto;
+      max-width: 1000px;
+      margin: 50px auto;
       padding: 0 20px;
     }
 
+    /* PAGE TITLE */
+
     .title {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 40px;
     }
 
     .title h2 {
-      font-size: 30px;
+      font-size: 32px;
+      margin-bottom: 10px;
     }
 
     .title p {
       color: #777;
-      margin-top: 8px;
+      font-size: 16px;
     }
+
+    /* POSTS GRID */
+
+    .posts {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    /* POST CARD */
 
     .post {
       background: white;
       padding: 28px;
-      margin-bottom: 20px;
-      border-radius: 15px;
+      border-radius: 16px;
       box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
+
+    .post:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    }
+
+    /* CATEGORY */
+
+    .category {
+      display: inline-block;
+      background: #eeeeee;
+      color: #333;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    /* POST TITLE */
 
     .post h3 {
       font-size: 23px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
+
+    /* DATE */
+
+    .date {
+      color: #999;
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    /* POST DESCRIPTION */
 
     .post p {
       color: #666;
       line-height: 1.7;
     }
 
+    /* READ MORE */
+
     .read-more {
       display: inline-block;
-      margin-top: 18px;
+      margin-top: 20px;
       padding: 10px 18px;
       background: #111;
       color: white;
       text-decoration: none;
       border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
+    .read-more:hover {
+      background: #333;
+    }
+
+    /* FOOTER */
+
     footer {
-      margin-top: 60px;
+      margin-top: 70px;
       background: #080808;
       color: #888;
       text-align: center;
-      padding: 25px;
+      padding: 28px 20px;
     }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      header h1 {
+        font-size: 30px;
+      }
+
+      nav a {
+        margin: 0 7px;
+        font-size: 14px;
+      }
+
+      .posts {
+        grid-template-columns: 1fr;
+      }
+
+      .title h2 {
+        font-size: 28px;
+      }
+
+      .post {
+        padding: 24px;
+      }
+
+    }
+
   </style>
 </head>
 
 <body>
 
+  <!-- HEADER -->
+
   <header>
     <h1>AnuZzzteach</h1>
     <p>Learn • Explore • Grow</p>
   </header>
+
+
+  <!-- NAVIGATION -->
 
   <nav>
     <a href="index.html">Home</a>
@@ -121,53 +251,94 @@
     <a href="about.html">About</a>
   </nav>
 
-  <div class="container">
+
+  <!-- MAIN -->
+
+  <main class="container">
 
     <div class="title">
       <h2>All Posts</h2>
-      <p>Explore all articles from AnuZzzteach.</p>
+      <p>Explore useful knowledge, learning tips and interesting ideas.</p>
     </div>
 
 
-    <!-- POST 1 -->
-    <div class="post">
+    <div class="posts">
 
-      <h3>My First Post</h3>
 
-      <p>
-        Welcome to AnuZzzteach.
-        This is the first blog post on the website.
-        More useful articles will be published soon.
-      </p>
+      <!-- POST 1 -->
 
-      <a href="posts/my-first-post.html" class="read-more">
-        Read More →
-      </a>
+      <article class="post">
+
+        <span class="category">
+          Welcome
+        </span>
+
+        <h3>
+          My First Post
+        </h3>
+
+        <div class="date">
+          Published on September 23, 2026
+        </div>
+
+        <p>
+          Welcome to AnuZzzteach. This is the first blog post
+          on the website. Discover useful knowledge, interesting
+          ideas and more educational content here.
+        </p>
+
+        <a
+          href="posts/my-first-post.html"
+          class="read-more"
+        >
+          Read More →
+        </a>
+
+      </article>
+
+
+      <!-- POST 2 -->
+
+      <article class="post">
+
+        <span class="category">
+          Learning
+        </span>
+
+        <h3>
+          How to Learn Better
+        </h3>
+
+        <div class="date">
+          Coming Soon
+        </div>
+
+        <p>
+          Simple and practical ideas that can help make learning
+          easier, more effective and more enjoyable.
+        </p>
+
+        <a
+          href="posts/second-post.html"
+          class="read-more"
+        >
+          Read More →
+        </a>
+
+      </article>
+
 
     </div>
 
-
-    <!-- POST 2 -->
-    <div class="post">
-
-      <h3>How to Learn Better</h3>
-
-      <p>
-        Simple tips to make learning easier, more effective
-        and more enjoyable.
-      </p>
-
-      <a href="posts/second-post.html" class="read-more">
-        Read More →
-      </a>
-
-    </div>
+  </main>
 
 
-  </div>
+  <!-- FOOTER -->
 
   <footer>
-    <p>© 2026 AnuZzzteach. All rights reserved.</p>
+    <p>
+      © 2026 AnuZzzteach. All rights reserved.
+    </p>
   </footer>
 
 </body>
