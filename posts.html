@@ -16,7 +16,7 @@
 
   <meta
     name="description"
-    content="Explore useful educational articles, learning tips, interesting ideas and simple explanations from AnuZzzteach."
+    content="Explore useful educational articles, technology tips, guides, life skills and motivational ideas from AnuZzzteach."
   >
 
   <meta
@@ -34,7 +34,10 @@
     href="https://mihizzz023-afk.github.io/AnuZzz.github.io/posts.html"
   >
 
-  <!-- Open Graph -->
+
+  <!-- =========================
+       OPEN GRAPH
+  ========================= -->
 
   <meta
     property="og:title"
@@ -43,7 +46,7 @@
 
   <meta
     property="og:description"
-    content="Explore useful articles and learning ideas from AnuZzzteach."
+    content="Explore useful articles, technology tips, guides and learning ideas from AnuZzzteach."
   >
 
   <meta
@@ -67,7 +70,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
 
@@ -88,16 +91,23 @@
     }
 
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+
     /* =========================
        HEADER
     ========================= */
 
     header {
+
       background:
         linear-gradient(
           135deg,
-          #0b0b0b,
-          #333
+          #071426,
+          #17283f
         );
 
       color: white;
@@ -111,16 +121,24 @@
 
 
     header h1 {
+
       font-size: 38px;
 
       letter-spacing: 1px;
     }
 
 
+    header h1 span {
+
+      color: #7188ff;
+    }
+
+
     header p {
+
       margin-top: 8px;
 
-      color: #ccc;
+      color: #cbd3df;
 
       font-size: 15px;
     }
@@ -131,15 +149,18 @@
     ========================= */
 
     .theme-toggle {
+
       position: absolute;
 
       right: 25px;
+
       top: 50%;
 
       transform:
         translateY(-50%);
 
       width: 44px;
+
       height: 44px;
 
       border: none;
@@ -165,6 +186,7 @@
 
 
     .theme-toggle:hover {
+
       background: #405675;
 
       transform:
@@ -178,6 +200,7 @@
     ========================= */
 
     nav {
+
       background: white;
 
       padding: 16px;
@@ -201,6 +224,7 @@
 
 
     nav a {
+
       text-decoration: none;
 
       color: #222;
@@ -216,11 +240,13 @@
 
 
     nav a:hover {
+
       color: #6678ff;
     }
 
 
     nav a.active {
+
       color: #5268e8;
     }
 
@@ -230,6 +256,7 @@
     ========================= */
 
     .page-hero {
+
       position: relative;
 
       min-height: 330px;
@@ -245,10 +272,12 @@
       padding: 60px 20px;
 
       background:
+
         linear-gradient(
           rgba(0,0,0,0.60),
-          rgba(0,0,0,0.70)
+          rgba(0,0,0,0.72)
         ),
+
         url(
           "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1600&q=85"
         );
@@ -260,13 +289,15 @@
 
 
     .page-hero-content {
+
       color: white;
 
-      max-width: 700px;
+      max-width: 750px;
     }
 
 
     .page-hero h2 {
+
       font-size: 44px;
 
       margin-bottom: 12px;
@@ -274,6 +305,7 @@
 
 
     .page-hero p {
+
       color: #eee;
 
       font-size: 17px;
@@ -285,30 +317,169 @@
     ========================= */
 
     .container {
-      max-width: 1050px;
 
-      margin: 60px auto;
+      max-width: 1100px;
+
+      margin: 55px auto;
 
       padding: 0 20px;
     }
 
 
+    /* =========================
+       CATEGORY FILTER
+    ========================= */
+
+    .category-filter {
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-bottom: 35px;
+    }
+
+
+    .filter-button {
+
+      border: none;
+
+      background: white;
+
+      color: #394354;
+
+      padding: 9px 16px;
+
+      border-radius: 22px;
+
+      font-size: 13px;
+
+      font-weight: bold;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 3px 12px
+        rgba(0,0,0,0.07);
+
+      transition: 0.25s;
+    }
+
+
+    .filter-button:hover {
+
+      transform:
+        translateY(-2px);
+
+      color: #5268e8;
+    }
+
+
+    .filter-button.active {
+
+      background: #6175ff;
+
+      color: white;
+
+      box-shadow:
+        0 6px 18px
+        rgba(97,117,255,0.25);
+    }
+
+
+    /* =========================
+       TITLE
+    ========================= */
+
     .title {
+
       text-align: center;
 
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
 
     .title h2 {
+
       font-size: 32px;
 
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
 
     .title p {
+
       color: #777;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    .search-box {
+
+      max-width: 500px;
+
+      margin:
+        0 auto 35px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      background: white;
+
+      border:
+        1px solid #e5e8ed;
+
+      border-radius: 12px;
+
+      padding: 11px 15px;
+
+      box-shadow:
+        0 3px 12px
+        rgba(0,0,0,0.05);
+    }
+
+
+    .search-box span {
+
+      font-size: 19px;
+
+      color: #6678ff;
+    }
+
+
+    .search-box input {
+
+      width: 100%;
+
+      border: none;
+
+      outline: none;
+
+      font-size: 14px;
+
+      background: transparent;
+
+      color: #222;
+    }
+
+
+    .search-box input::placeholder {
+
+      color: #999;
     }
 
 
@@ -317,6 +488,7 @@
     ========================= */
 
     .posts {
+
       display: grid;
 
       grid-template-columns:
@@ -331,6 +503,7 @@
     ========================= */
 
     .post {
+
       background: white;
 
       border-radius: 17px;
@@ -345,15 +518,19 @@
         transform 0.3s,
         box-shadow 0.3s,
         background 0.3s;
+
+      border:
+        1px solid #edf0f5;
     }
 
 
     .post:hover {
+
       transform:
         translateY(-6px);
 
       box-shadow:
-        0 10px 28px
+        0 12px 30px
         rgba(0,0,0,0.13);
     }
 
@@ -363,6 +540,7 @@
     ========================= */
 
     .post-image {
+
       width: 100%;
 
       height: 230px;
@@ -378,6 +556,7 @@
     ========================= */
 
     .post-content {
+
       padding: 28px;
     }
 
@@ -387,21 +566,22 @@
     ========================= */
 
     .category {
+
       display: inline-block;
 
-      background: #111;
+      background: #edf0ff;
 
-      color: white;
+      color: #5268e8;
 
       padding: 6px 12px;
 
       border-radius: 20px;
 
-      font-size: 12px;
+      font-size: 11px;
 
       font-weight: bold;
 
-      margin-bottom: 15px;
+      margin-bottom: 14px;
     }
 
 
@@ -410,11 +590,14 @@
     ========================= */
 
     .post h3 {
-      font-size: 24px;
+
+      font-size: 23px;
 
       margin-bottom: 7px;
 
       line-height: 1.3;
+
+      color: #172033;
     }
 
 
@@ -423,6 +606,7 @@
     ========================= */
 
     .date {
+
       color: #999;
 
       font-size: 13px;
@@ -436,24 +620,28 @@
     ========================= */
 
     .post p {
+
       color: #666;
 
       line-height: 1.8;
+
+      font-size: 14px;
     }
 
 
     /* =========================
-       READ MORE BUTTON
+       READ MORE
     ========================= */
 
     .read-more {
+
       display: inline-block;
 
       margin-top: 20px;
 
       padding: 11px 20px;
 
-      background: #111;
+      background: #6175ff;
 
       color: white;
 
@@ -463,12 +651,64 @@
 
       font-weight: bold;
 
+      font-size: 13px;
+
       transition: 0.3s;
     }
 
 
     .read-more:hover {
-      background: #333;
+
+      background: #7183ff;
+
+      transform:
+        translateY(-2px);
+    }
+
+
+    /* =========================
+       NO RESULTS
+    ========================= */
+
+    .no-results {
+
+      display: none;
+
+      text-align: center;
+
+      padding: 50px 20px;
+
+      background: white;
+
+      border-radius: 16px;
+
+      box-shadow:
+        0 5px 18px
+        rgba(0,0,0,0.06);
+    }
+
+
+    .no-results-icon {
+
+      font-size: 45px;
+
+      margin-bottom: 10px;
+    }
+
+
+    .no-results h3 {
+
+      font-size: 22px;
+
+      margin-bottom: 6px;
+    }
+
+
+    .no-results p {
+
+      color: #777;
+
+      font-size: 14px;
     }
 
 
@@ -477,22 +717,36 @@
     ========================= */
 
     footer {
+
       margin-top: 70px;
 
-      background: #050505;
+      background: #071426;
 
-      color: #888;
+      color: #8995a7;
 
       text-align: center;
 
-      padding: 28px 20px;
+      padding: 30px 20px;
 
       font-size: 14px;
     }
 
 
+    footer strong {
+
+      color: white;
+    }
+
+
+    footer span {
+
+      color: #7188ff;
+    }
+
+
     footer a {
-      color: #aaa;
+
+      color: #aeb8c7;
 
       text-decoration: none;
 
@@ -503,12 +757,16 @@
 
 
     footer a:hover {
+
       color: white;
     }
 
 
     .footer-links {
-      margin-top: 10px;
+
+      margin-top: 12px;
+
+      line-height: 2;
     }
 
 
@@ -517,6 +775,7 @@
     ========================= */
 
     body.dark-mode {
+
       background: #0e141d;
 
       color: #e8edf5;
@@ -524,6 +783,7 @@
 
 
     body.dark-mode nav {
+
       background: #151e2b;
 
       box-shadow:
@@ -533,32 +793,74 @@
 
 
     body.dark-mode nav a {
+
       color: #d5dbe5;
     }
 
 
     body.dark-mode nav a:hover {
+
       color: #8d9cff;
     }
 
 
     body.dark-mode nav a.active {
+
       color: #9aa7ff;
     }
 
 
+    body.dark-mode .filter-button {
+
+      background: #182230;
+
+      color: #d5dbe5;
+
+      box-shadow:
+        0 3px 12px
+        rgba(0,0,0,0.25);
+    }
+
+
+    body.dark-mode .filter-button.active {
+
+      background: #6175ff;
+
+      color: white;
+    }
+
+
     body.dark-mode .title h2 {
+
       color: #f1f4f8;
     }
 
 
     body.dark-mode .title p {
+
       color: #aeb8c7;
     }
 
 
-    body.dark-mode .post {
+    body.dark-mode .search-box {
+
       background: #182230;
+
+      border-color: #29384b;
+    }
+
+
+    body.dark-mode .search-box input {
+
+      color: #f1f4f8;
+    }
+
+
+    body.dark-mode .post {
+
+      background: #182230;
+
+      border-color: #263448;
 
       box-shadow:
         0 5px 20px
@@ -567,6 +869,7 @@
 
 
     body.dark-mode .post:hover {
+
       box-shadow:
         0 10px 30px
         rgba(0,0,0,0.40);
@@ -574,38 +877,51 @@
 
 
     body.dark-mode .post h3 {
+
       color: #f1f4f8;
     }
 
 
     body.dark-mode .post p {
+
       color: #aeb8c7;
     }
 
 
     body.dark-mode .date {
+
       color: #8f9bad;
     }
 
 
     body.dark-mode .category {
+
       background: #303b68;
 
       color: #dce1ff;
     }
 
 
-    body.dark-mode .read-more {
-      background: #6175ff;
+    body.dark-mode .no-results {
+
+      background: #182230;
     }
 
 
-    body.dark-mode .read-more:hover {
-      background: #7183ff;
+    body.dark-mode .no-results h3 {
+
+      color: #f1f4f8;
+    }
+
+
+    body.dark-mode .no-results p {
+
+      color: #aeb8c7;
     }
 
 
     body.dark-mode .theme-toggle {
+
       background: #354b68;
     }
 
@@ -617,22 +933,26 @@
     @media (max-width: 700px) {
 
       header {
+
         padding:
           27px 65px 27px 20px;
       }
 
 
       header h1 {
+
         font-size: 30px;
       }
 
 
       header p {
+
         font-size: 14px;
       }
 
 
       .theme-toggle {
+
         right: 18px;
 
         width: 42px;
@@ -642,6 +962,7 @@
 
 
       nav {
+
         padding: 14px 6px;
 
         display: flex;
@@ -657,6 +978,7 @@
 
 
       nav a {
+
         margin: 0;
 
         font-size: 12px;
@@ -664,57 +986,92 @@
 
 
       .page-hero {
+
         min-height: 300px;
       }
 
 
       .page-hero h2 {
+
         font-size: 34px;
       }
 
 
       .page-hero p {
+
         font-size: 15px;
       }
 
 
+      .container {
+
+        margin:
+          40px auto;
+      }
+
+
+      .category-filter {
+
+        gap: 7px;
+
+        margin-bottom: 25px;
+      }
+
+
+      .filter-button {
+
+        padding:
+          8px 12px;
+
+        font-size: 11px;
+      }
+
+
       .posts {
+
         grid-template-columns: 1fr;
+
+        gap: 22px;
       }
 
 
       .post-image {
-        height: 200px;
+
+        height: 210px;
       }
 
 
       .post-content {
+
         padding: 23px;
       }
 
 
+      .post h3 {
+
+        font-size: 21px;
+      }
+
+
       .title h2 {
+
         font-size: 28px;
       }
 
 
-      .container {
-        margin: 45px auto;
+      .search-box {
+
+        margin-bottom: 28px;
       }
 
 
       footer {
+
         padding:
           25px 15px;
       }
 
-
-      .footer-links {
-        line-height: 2;
-      }
-
     }
-
 
   </style>
 
@@ -731,15 +1088,13 @@
   <header>
 
     <h1>
-      AnuZzzteach
+      AnuZzz<span>teach</span>
     </h1>
 
     <p>
       Learn • Explore • Grow
     </p>
 
-
-    <!-- DARK MODE BUTTON -->
 
     <button
       class="theme-toggle"
@@ -748,9 +1103,7 @@
       aria-label="Toggle dark mode"
       title="Toggle dark mode"
     >
-
       🌙
-
     </button>
 
   </header>
@@ -766,7 +1119,6 @@
       Home
     </a>
 
-
     <a
       href="posts.html"
       class="active"
@@ -774,16 +1126,13 @@
       Posts
     </a>
 
-
     <a href="about.html">
       About
     </a>
 
-
     <a href="contact.html">
       Contact
     </a>
-
 
     <a href="tech-lab.html">
       🧪 Tech Lab
@@ -793,18 +1142,18 @@
 
 
   <!-- =========================
-       PAGE HERO
+       HERO
   ========================= -->
 
   <section class="page-hero">
 
     <div class="page-hero-content">
 
-      <h2>
+      <h2 id="heroTitle">
         Explore Our Posts
       </h2>
 
-      <p>
+      <p id="heroDescription">
         Discover useful knowledge, learning tips
         and interesting ideas.
       </p>
@@ -821,27 +1170,121 @@
   <main class="container">
 
 
+    <!-- =========================
+         CATEGORY FILTER
+    ========================= -->
+
+    <div class="category-filter">
+
+      <button
+        class="filter-button active"
+        data-category="all"
+        onclick="filterCategory('all')"
+      >
+        📰 All Posts
+      </button>
+
+
+      <button
+        class="filter-button"
+        data-category="education"
+        onclick="filterCategory('education')"
+      >
+        🎓 Education
+      </button>
+
+
+      <button
+        class="filter-button"
+        data-category="technology"
+        onclick="filterCategory('technology')"
+      >
+        💻 Technology
+      </button>
+
+
+      <button
+        class="filter-button"
+        data-category="life"
+        onclick="filterCategory('life')"
+      >
+        💡 Life Skills
+      </button>
+
+
+      <button
+        class="filter-button"
+        data-category="guides"
+        onclick="filterCategory('guides')"
+      >
+        📖 Guides
+      </button>
+
+
+      <button
+        class="filter-button"
+        data-category="motivation"
+        onclick="filterCategory('motivation')"
+      >
+        ❤️ Motivation
+      </button>
+
+    </div>
+
+
+    <!-- =========================
+         TITLE
+    ========================= -->
+
     <div class="title">
 
-      <h2>
+      <h2 id="postsTitle">
         All Posts
       </h2>
 
-      <p>
+      <p id="postsDescription">
         Learn something new and explore different ideas.
       </p>
 
     </div>
 
 
-    <div class="posts">
+    <!-- =========================
+         SEARCH
+    ========================= -->
+
+    <div class="search-box">
+
+      <span>
+        🔎
+      </span>
+
+      <input
+        type="text"
+        id="postSearch"
+        placeholder="Search posts..."
+        onkeyup="searchPosts()"
+      >
+
+    </div>
+
+
+    <!-- =========================
+         POSTS
+    ========================= -->
+
+    <div class="posts" id="postsContainer">
 
 
       <!-- =========================
            POST 1
       ========================= -->
 
-      <article class="post">
+      <article
+        class="post"
+        data-category="education"
+        data-search="my first post welcome education learning"
+      >
 
         <img
           class="post-image"
@@ -854,7 +1297,7 @@
         <div class="post-content">
 
           <span class="category">
-            Welcome
+            Education
           </span>
 
 
@@ -870,9 +1313,9 @@
 
           <p>
             Welcome to AnuZzzteach.
-            This is the first blog post on the website.
-            Discover useful knowledge, interesting ideas
-            and more educational content here.
+            This is the beginning of our learning journey.
+            Discover useful knowledge and interesting
+            educational content here.
           </p>
 
 
@@ -892,7 +1335,11 @@
            POST 2
       ========================= -->
 
-      <article class="post">
+      <article
+        class="post"
+        data-category="education"
+        data-search="how to learn better learning education study tips"
+      >
 
         <img
           class="post-image"
@@ -905,7 +1352,7 @@
         <div class="post-content">
 
           <span class="category">
-            Learning
+            Education
           </span>
 
 
@@ -938,7 +1385,248 @@
       </article>
 
 
+      <!-- =========================
+           POST 3
+      ========================= -->
+
+      <article
+        class="post"
+        data-category="technology"
+        data-search="technology tips apps tools ai gadgets technology"
+      >
+
+        <img
+          class="post-image"
+          src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=1200&q=85"
+          alt="Technology workspace"
+          loading="lazy"
+        >
+
+
+        <div class="post-content">
+
+          <span class="category">
+            Technology
+          </span>
+
+
+          <h3>
+            Technology Tips
+          </h3>
+
+
+          <div class="date">
+            Published on September 24, 2026
+          </div>
+
+
+          <p>
+            Useful technology tips, apps, tools and
+            simple ideas that can make your digital
+            life easier.
+          </p>
+
+
+          <a
+            href="#"
+            class="read-more"
+          >
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- =========================
+           POST 4
+      ========================= -->
+
+      <article
+        class="post"
+        data-category="guides"
+        data-search="telegram privacy tricks telegram privacy security guide"
+      >
+
+        <img
+          class="post-image"
+          src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=85"
+          alt="Technology and security"
+          loading="lazy"
+        >
+
+
+        <div class="post-content">
+
+          <span class="category">
+            Guides
+          </span>
+
+
+          <h3>
+            Top 5 Telegram Privacy Tricks You Should Enable Right Now
+          </h3>
+
+
+          <div class="date">
+            Published on September 23, 2026
+          </div>
+
+
+          <p>
+            Five useful Telegram privacy settings
+            covering account visibility, privacy controls
+            and ways to improve your Telegram experience.
+          </p>
+
+
+          <a
+            href="posts/telegram-privacy-tricks.html"
+            class="read-more"
+          >
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- =========================
+           POST 5
+      ========================= -->
+
+      <article
+        class="post"
+        data-category="life"
+        data-search="life skills productivity habits everyday skills"
+      >
+
+        <img
+          class="post-image"
+          src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=1200&q=85"
+          alt="Planning and productivity"
+          loading="lazy"
+        >
+
+
+        <div class="post-content">
+
+          <span class="category">
+            Life Skills
+          </span>
+
+
+          <h3>
+            Simple Productivity Habits
+          </h3>
+
+
+          <div class="date">
+            Published on September 24, 2026
+          </div>
+
+
+          <p>
+            Simple everyday habits and practical ideas
+            that can help you organize your time and
+            get things done.
+          </p>
+
+
+          <a
+            href="#"
+            class="read-more"
+          >
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+
+      <!-- =========================
+           POST 6
+      ========================= -->
+
+      <article
+        class="post"
+        data-category="motivation"
+        data-search="motivation personal growth inspiration positive ideas"
+      >
+
+        <img
+          class="post-image"
+          src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1200&q=85"
+          alt="Personal growth and motivation"
+          loading="lazy"
+        >
+
+
+        <div class="post-content">
+
+          <span class="category">
+            Motivation
+          </span>
+
+
+          <h3>
+            Keep Learning, Keep Growing
+          </h3>
+
+
+          <div class="date">
+            Published on September 24, 2026
+          </div>
+
+
+          <p>
+            A simple reminder to keep learning,
+            developing your skills and moving forward
+            one step at a time.
+          </p>
+
+
+          <a
+            href="#"
+            class="read-more"
+          >
+            Read More →
+          </a>
+
+        </div>
+
+      </article>
+
+
     </div>
+
+
+    <!-- =========================
+         NO RESULTS
+    ========================= -->
+
+    <div
+      class="no-results"
+      id="noResults"
+    >
+
+      <div class="no-results-icon">
+        🔎
+      </div>
+
+      <h3>
+        No Posts Found
+      </h3>
+
+      <p>
+        There are no posts matching your selection.
+      </p>
+
+    </div>
+
 
   </main>
 
@@ -950,7 +1638,11 @@
   <footer>
 
     <p>
-      © 2026 AnuZzzteach. All rights reserved.
+      © 2026
+      <strong>
+        AnuZzz<span>teach</span>
+      </strong>.
+      All rights reserved.
     </p>
 
 
@@ -982,10 +1674,404 @@
 
 
   <!-- =========================
-       DARK MODE SCRIPT
+       JAVASCRIPT
   ========================= -->
 
   <script>
+
+
+    /* =========================
+       CATEGORY INFORMATION
+    ========================= */
+
+    const categoryInfo = {
+
+      all: {
+
+        title: "All Posts",
+
+        description:
+          "Learn something new and explore different ideas.",
+
+        heroTitle:
+          "Explore Our Posts",
+
+        heroDescription:
+          "Discover useful knowledge, learning tips and interesting ideas."
+
+      },
+
+
+      education: {
+
+        title: "Education",
+
+        description:
+          "Study tips, learning resources and useful knowledge.",
+
+        heroTitle:
+          "Education Posts",
+
+        heroDescription:
+          "Explore useful learning resources, study tips and educational ideas."
+
+      },
+
+
+      technology: {
+
+        title: "Technology",
+
+        description:
+          "Apps, tools, AI, gadgets and useful technology.",
+
+        heroTitle:
+          "Technology Posts",
+
+        heroDescription:
+          "Discover useful technology tips, tools, apps and digital ideas."
+
+      },
+
+
+      life: {
+
+        title: "Life Skills",
+
+        description:
+          "Better habits, productivity and everyday skills.",
+
+        heroTitle:
+          "Life Skills Posts",
+
+        heroDescription:
+          "Explore practical ideas for productivity, habits and everyday life."
+
+      },
+
+
+      guides: {
+
+        title: "Guides",
+
+        description:
+          "Simple step-by-step tutorials and helpful guides.",
+
+        heroTitle:
+          "Guides & Tutorials",
+
+        heroDescription:
+          "Follow simple guides and discover useful step-by-step tutorials."
+
+      },
+
+
+      motivation: {
+
+        title: "Motivation",
+
+        description:
+          "Inspiration, positive ideas and personal growth.",
+
+        heroTitle:
+          "Motivation Posts",
+
+        heroDescription:
+          "Discover positive ideas, inspiration and personal growth content."
+
+      }
+
+    };
+
+
+    /* =========================
+       GET POSTS
+    ========================= */
+
+    const posts =
+      document.querySelectorAll(".post");
+
+
+    /* =========================
+       FILTER CATEGORY
+    ========================= */
+
+    function filterCategory(category) {
+
+      const buttons =
+        document.querySelectorAll(
+          ".filter-button"
+        );
+
+
+      buttons.forEach(function(button) {
+
+        button.classList.remove("active");
+
+        if (
+          button.dataset.category === category
+        ) {
+
+          button.classList.add("active");
+
+        }
+
+      });
+
+
+      const info =
+        categoryInfo[category] ||
+        categoryInfo.all;
+
+
+      document.getElementById(
+        "postsTitle"
+      ).textContent =
+        info.title;
+
+
+      document.getElementById(
+        "postsDescription"
+      ).textContent =
+        info.description;
+
+
+      document.getElementById(
+        "heroTitle"
+      ).textContent =
+        info.heroTitle;
+
+
+      document.getElementById(
+        "heroDescription"
+      ).textContent =
+        info.heroDescription;
+
+
+      /*
+       * Clear search when
+       * changing category
+       */
+
+      document.getElementById(
+        "postSearch"
+      ).value = "";
+
+
+      let visibleCount = 0;
+
+
+      posts.forEach(function(post) {
+
+        const postCategory =
+          post.dataset.category;
+
+
+        if (
+          category === "all" ||
+          postCategory === category
+        ) {
+
+          post.style.display = "";
+
+          visibleCount++;
+
+        } else {
+
+          post.style.display = "none";
+
+        }
+
+      });
+
+
+      updateNoResults(
+        visibleCount
+      );
+
+
+      /*
+       * Update URL
+       */
+
+      if (category === "all") {
+
+        history.replaceState(
+          null,
+          "",
+          "posts.html"
+        );
+
+      } else {
+
+        history.replaceState(
+          null,
+          "",
+          "posts.html?category=" +
+          encodeURIComponent(category)
+        );
+
+      }
+
+    }
+
+
+    /* =========================
+       SEARCH POSTS
+    ========================= */
+
+    function searchPosts() {
+
+      const search =
+        document
+          .getElementById("postSearch")
+          .value
+          .toLowerCase()
+          .trim();
+
+
+      /*
+       * Get currently selected category
+       */
+
+      const activeButton =
+        document.querySelector(
+          ".filter-button.active"
+        );
+
+
+      const activeCategory =
+        activeButton
+          ? activeButton.dataset.category
+          : "all";
+
+
+      let visibleCount = 0;
+
+
+      posts.forEach(function(post) {
+
+        const postCategory =
+          post.dataset.category;
+
+
+        const text =
+          (
+            post.dataset.search +
+            " " +
+            post.innerText
+          ).toLowerCase();
+
+
+        const categoryMatch =
+          activeCategory === "all" ||
+          postCategory === activeCategory;
+
+
+        const searchMatch =
+          search === "" ||
+          text.includes(search);
+
+
+        if (
+          categoryMatch &&
+          searchMatch
+        ) {
+
+          post.style.display = "";
+
+          visibleCount++;
+
+        } else {
+
+          post.style.display = "none";
+
+        }
+
+      });
+
+
+      updateNoResults(
+        visibleCount
+      );
+
+    }
+
+
+    /* =========================
+       NO RESULTS
+    ========================= */
+
+    function updateNoResults(
+      visibleCount
+    ) {
+
+      const noResults =
+        document.getElementById(
+          "noResults"
+        );
+
+
+      if (visibleCount === 0) {
+
+        noResults.style.display =
+          "block";
+
+      } else {
+
+        noResults.style.display =
+          "none";
+
+      }
+
+    }
+
+
+    /* =========================
+       READ CATEGORY FROM URL
+    ========================= */
+
+    function loadCategoryFromURL() {
+
+      const params =
+        new URLSearchParams(
+          window.location.search
+        );
+
+
+      const category =
+        params.get("category");
+
+
+      const validCategories = [
+        "all",
+        "education",
+        "technology",
+        "life",
+        "guides",
+        "motivation"
+      ];
+
+
+      if (
+        category &&
+        validCategories.includes(category)
+      ) {
+
+        filterCategory(category);
+
+      } else {
+
+        filterCategory("all");
+
+      }
+
+    }
+
+
+    /* =========================
+       DARK MODE
+    ========================= */
 
     function toggleDarkMode() {
 
@@ -1033,41 +2119,56 @@
        LOAD SAVED THEME
     ========================= */
 
+    function loadTheme() {
+
+      const savedTheme =
+        localStorage.getItem(
+          "theme"
+        );
+
+
+      const button =
+        document.getElementById(
+          "themeToggle"
+        );
+
+
+      if (
+        savedTheme === "dark"
+      ) {
+
+        document.body.classList.add(
+          "dark-mode"
+        );
+
+        button.textContent =
+          "☀️";
+
+      } else {
+
+        button.textContent =
+          "🌙";
+
+      }
+
+    }
+
+
+    /* =========================
+       PAGE LOAD
+    ========================= */
+
     window.addEventListener(
       "load",
       function() {
 
-        const savedTheme =
-          localStorage.getItem(
-            "theme"
-          );
+        loadTheme();
 
-
-        const button =
-          document.getElementById(
-            "themeToggle"
-          );
-
-
-        if (
-          savedTheme === "dark"
-        ) {
-
-          document.body.classList.add(
-            "dark-mode"
-          );
-
-
-          button.textContent = "☀️";
-
-        } else {
-
-          button.textContent = "🌙";
-
-        }
+        loadCategoryFromURL();
 
       }
     );
+
 
   </script>
 
